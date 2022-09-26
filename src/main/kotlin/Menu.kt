@@ -56,7 +56,7 @@ val Menu = FC<MenuProps> { props ->
                     marginLeft = Auto.auto
                     marginRight = Auto.auto
                 }
-                src = props.profile.imageUrl
+                src = props.profile.image
             }
             span {
                 css {
@@ -104,7 +104,7 @@ val Menu = FC<MenuProps> { props ->
                                 width = 3.vmin
                                 height = 3.vmin
                             }
-                            src = it.icon
+                            src = it.image
                         }
                     }
                 }
