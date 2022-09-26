@@ -1,0 +1,28 @@
+@font-face {
+    font-family: "EnglishTowne";
+    src: url("fonts/EnglishTowne.ttf");
+}
+@font-face {
+    font-family: "coolvetica";
+    src: url("fonts/coolvetica.ttf");
+}
+@font-face {
+    font-family: "BebasNeue";
+    src: url("fonts/BebasNeue.ttf");
+}
+@font-face {
+    font-family: "Quando";
+    src: url("fonts/Quando.ttf");
+}
+@font-face {
+    font-family: "GlacialIndifference";
+    src: url("fonts/GlacialIndifference-Bold.otf");
+    font-weight: bold;
+    font-style: normal;
+}
+@font-face {
+    font-family: "GlacialIndifference";
+    src: url("fonts/GlacialIndifference-Regular.otf");
+    font-weight: normal;
+    font-style: normal;
+}
