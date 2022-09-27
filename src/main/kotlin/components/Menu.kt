@@ -1,21 +1,14 @@
+package components
+
 import csstype.*
-import csstype.LineStyle.Companion.inset
-import csstype.LineStyle.Companion.solid
-import csstype.LineWidth.Companion.thick
 import emotion.react.css
-import kotlinx.browser.document
-import kotlinx.browser.window
 import model.MenuOption
 import model.Profile
-import org.w3c.dom.css.CSS
-import org.w3c.dom.css.CSSStyleSheet
 import react.ChildrenBuilder
 import react.FC
 import react.Props
 import react.dom.html.AnchorTarget
-import react.dom.html.ReactHTML
 import react.dom.html.ReactHTML.a
-import react.dom.html.ReactHTML.article
 import react.dom.html.ReactHTML.div
 import react.dom.html.ReactHTML.footer
 import react.dom.html.ReactHTML.header
@@ -23,9 +16,7 @@ import react.dom.html.ReactHTML.img
 import react.dom.html.ReactHTML.main
 import react.dom.html.ReactHTML.p
 import react.dom.html.ReactHTML.span
-import react.router.useHref
 import theme.*
-import kotlin.js.Date
 
 external interface MenuProps : Props {
     var profile: Profile
@@ -130,10 +121,11 @@ private fun ChildrenBuilder.MenuOptionItem(
             display = Display.inlineFlex
             alignItems = AlignItems.center
             cursor = "pointer".unsafeCast<Cursor>()
+            transition = "all 0.2s ease-in-out 0s".unsafeCast<Transition>()
+            if(selected) color = Colors.secondary
             hover {
-                color = Colors.lightpink
+                if(!selected) textDecoration = TextDecoration.underline
             }
-            if(selected) textDecoration = TextDecoration.underline
         }
         this.onClick = { onClick() }
         +option.title

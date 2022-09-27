@@ -7,8 +7,8 @@ import kotlin.math.round
 
 object Colors {
 
-    val primary = Color("#98FB98")
-    val secondary = Color("#98FB98")
+    val primary = Color("#FFFFFF")
+    val secondary = Color("#9402ff")
     val surface = Color("#000000")
 
 
@@ -25,6 +25,7 @@ object Colors {
     val crimson = Color("#DC143C")
     val magenta = Color("#FF00FF")
     val indigo = Color("#4B0082")
+    val violet = Color("#9402ff")
     val olive = Color("#808000")
     val green = Color("#008000")
     val cyan = Color("#00FFFF")

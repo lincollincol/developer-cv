@@ -10,6 +10,6 @@ sealed class MenuOption(
     object Contact : MenuOption("Contact")
 
     companion object {
-        fun items() = listOf(About, WorkExperience, Skills, Projects, Contact)
+        fun items() = listOf(About, WorkExperience, Skills, Projects)
     }
 }

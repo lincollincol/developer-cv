@@ -1,31 +1,19 @@
+import components.Content
+import components.Menu
 import csstype.*
 import emotion.react.css
-import kotlinext.js.asJsObject
-import kotlinext.js.require
-import kotlinx.browser.document
-import kotlinx.browser.window
-import kotlinx.coroutines.*
-import kotlinx.serialization.DeserializationStrategy
 import kotlinx.serialization.decodeFromString
-import kotlinx.serialization.descriptors.SerialDescriptor
-import kotlinx.serialization.encoding.Decoder
 import kotlinx.serialization.json.Json
 import model.MenuOption
 import model.Profile
-import model.Social
-import org.w3c.fetch.Request
-import org.w3c.files.File
-import org.w3c.files.FileReader
-import org.w3c.xhr.XMLHttpRequest
 import react.FC
 import react.Props
 import react.dom.html.ReactHTML.div
 import react.useEffectOnce
 import react.useState
-import theme.Colors
 import theme.glacialIndifference
-import kotlin.coroutines.resume
-import kotlin.coroutines.suspendCoroutine
+import utils.readFile
+import widgets.VerticalDivider
 
 val App = FC<Props> {
 
@@ -48,15 +36,16 @@ val App = FC<Props> {
             }
             Menu {
                 this.profile = it
-                options = MenuOption.items()
-                selectedMenuOption = currentMenuOption
-                onItemClick = { menuOption ->
+                this.options = MenuOption.items()
+                this.selectedMenuOption = currentMenuOption
+                this.onItemClick = { menuOption ->
                     currentMenuOption = menuOption
                 }
             }
             VerticalDivider()
             Content {
-
+                this.profile = it
+                this.selectedMenuOption = currentMenuOption
             }
         }
 

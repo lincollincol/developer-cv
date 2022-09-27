@@ -1,3 +1,5 @@
+package widgets
+
 import csstype.*
 import emotion.react.css
 import react.ChildrenBuilder
@@ -7,7 +9,7 @@ import theme.Colors
 fun ChildrenBuilder.VerticalDivider(
     color: Color = Colors.white,
     width: Length = 1.px,
-    opacity: Opacity = number(0.25)
+    opacity: Opacity = number(0.15)
 ) {
     div {
         css {

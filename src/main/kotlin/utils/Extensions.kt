@@ -1,3 +1,5 @@
+package utils
+
 import kotlinx.serialization.decodeFromString
 import kotlinx.serialization.json.Json
 import org.w3c.xhr.XMLHttpRequest
@@ -21,7 +23,7 @@ fun readFile(
 //    jsonFile: String,
 //    crossinline result: (T) -> Unit
 //) {
-//    readFile(jsonFile) {
+//    utils.readFile(jsonFile) {
 //        result(Json.decodeFromString(it))
 //    }
 //}
