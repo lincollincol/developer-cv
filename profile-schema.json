@@ -1,0 +1,120 @@
+{
+  "name": "Andrii Serbeniuk",
+  "about": "2+ years of experience in Android Development.\nExtensive knowledge of Android SDK and google architecture components.\nExperience with front-end and back-end development (Firebase/Kotlin/Java). Strong technical background.",
+  "image": "https://avatars.githubusercontent.com/u/32796762",
+  "workExperience": [
+    {
+      "company": "Deviark",
+      "role": "Android Developer",
+      "dates": "Mar 2021 — Present"
+    },
+    {
+      "company": "Freelance",
+      "role": "Android Developer",
+      "dates": "Jul 2020 — Oct 2020"
+    },
+    {
+      "company": "InRating",
+      "role": "Android Developer",
+      "dates": "Apr 2020 — Sep 2020"
+    },
+    {
+      "company": "Freelance",
+      "role": "Android Developer",
+      "dates": "Sep 2019 — Mar 2020"
+    }
+  ],
+  "skills": [
+    {
+      "name": "Developing Android applications using Kotlin and Java languages"
+    },
+    {
+      "name": "Android SDK and Android NDK"
+    },
+    {
+      "name": "Android Architecture Components (Room, ViewModel etc.)"
+    },
+    {
+      "name": "Clean Architecture, MVP, MVI, MVVM patterns and SOLID principles"
+    },
+    {
+      "name": "OkHttp, Retrofit2, Volley, JSch (sftp), Ktor"
+    },
+    {
+      "name": "Gson, Kotlin Serialization"
+    },
+    {
+      "name": "Firebase (storage, database, firestore, analytics etc.), GeoFirestore"
+    },
+    {
+      "name": "RxJava, Kotlin Coroutines and Flow"
+    },
+    {
+      "name": "Koin, Hilt"
+    },
+    {
+      "name": "Cicerone, ExoPlayer, Glide"
+    },
+    {
+      "name": "GoogleMaps, Voximplant, FFmpeg"
+    },
+    {
+      "name": "ViewBinding, DataBinding"
+    },
+    {
+      "name": "MotionLayout, Lottine, Transition API, Groupie, CustomView etc."
+    },
+    {
+      "name": "Git versions control system"
+    }
+  ],
+  "projects": [
+    {
+      "name": "WaveformSeekbar (open source)",
+      "description": "Android Waveform SeekBar library",
+      "url": "https://github.com/massoudss/waveformSeekBar"
+    },
+    {
+      "name": "Amplituda (open source)",
+      "description": "Android library that calculates amplitudes from audio and provides data to draw",
+      "url": "https://github.com/lincollincol/Amplituda"
+    },
+    {
+      "name": "AudioTool (open source)",
+      "description": "Android library that provides audio manipulation functions like increase/decrease speed, pitch, volume, bass, etc. Library also provides cut, noise remover, and other interesting and helpfull functions",
+      "url": "https://github.com/lincollincol/AudioTool"
+    },
+    {
+      "name": "Vixinity",
+      "description": "Social platform for residential compounds with news, ads, ability to order food & chat with app users",
+      "url": ""
+    },
+    {
+      "name": "TopTalk messenger",
+      "description": "Messenger that translates messages to your native language",
+      "url": ""
+    }
+  ],
+  "socials": [
+    {
+      "name": "Github",
+      "image": "img/github.png",
+      "url": "https://github.com/lincollincol"
+    },
+    {
+      "name": "StackOverflow",
+      "image": "img/stack-overflow.png",
+      "url": "https://stackoverflow.com/users/9949259/lincollincol"
+    },
+    {
+      "name": "LinkedIn",
+      "image": "img/linkedin.png",
+      "url": "https://www.linkedin.com/in/andrew-linc-5976b0169/"
+    },
+    {
+      "name": "Medium",
+      "image": "img/medium.png",
+      "url": "https://medium.com/@lincollincol"
+    }
+  ]
+}
