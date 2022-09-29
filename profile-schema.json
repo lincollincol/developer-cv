@@ -5,23 +5,27 @@
   "workExperience": [
     {
       "company": "Deviark",
+      "image": "img/deviark.png",
       "role": "Android Developer",
-      "dates": "Mar 2021 — Present"
+      "dates": "Mar 2021 — Present (1 y. 7 mon.)"
     },
     {
       "company": "Freelance",
+      "image": "img/freelance.png",
       "role": "Android Developer",
-      "dates": "Jul 2020 — Oct 2020"
+      "dates": "Jul 2020 — Oct 2020 (4 mon.)"
     },
     {
       "company": "InRating",
+      "image": "img/inrating.webp",
       "role": "Android Developer",
-      "dates": "Apr 2020 — Sep 2020"
+      "dates": "Apr 2020 — Sep 2020 (6 mon.)"
     },
     {
       "company": "Freelance",
+      "image": "img/freelance.png",
       "role": "Android Developer",
-      "dates": "Sep 2019 — Mar 2020"
+      "dates": "Sep 2019 — Mar 2020 (7 mon.)"
     }
   ],
   "skills": [

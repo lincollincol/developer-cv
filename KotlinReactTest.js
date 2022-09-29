@@ -35827,7 +35827,7 @@ var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_
   function Menu$lambda$lambda$lambda$lambda(closure$props) {
     return function ($receiver) {
       var $receiver_0 = {};
-      $receiver_0.width = (75).toString() + '%';
+      $receiver_0.width = (20).toString() + 'vmin';
       $receiver_0.borderRadius = (50).toString() + '%';
       $receiver_0.marginTop = (2).toString() + 'vmin';
       $receiver_0.marginBottom = (2).toString() + 'vmin';
@@ -35980,7 +35980,7 @@ var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_
       $receiver_0.display = {block: 'block', inline: 'inline', runIn: 'run-in', flex: 'flex', flow: 'flow', flowRoot: 'flow-root', grid: 'grid', ruby: 'ruby', table: 'table', rubyBase: 'ruby-base', rubyBaseContainer: 'ruby-base-container', rubyText: 'ruby-text', rubyTextContainer: 'ruby-text-container', tableCaption: 'table-caption', tableCell: 'table-cell', tableColumn: 'table-column', tableColumnGroup: 'table-column-group', tableFooterGroup: 'table-footer-group', tableHeaderGroup: 'table-header-group', tableRow: 'table-row', tableRowGroup: 'table-row-group', inlineBlock: 'inline-block', inlineFlex: 'inline-flex', inlineGrid: 'inline-grid', inlineListItem: 'inline-list-item', inlineTable: 'inline-table', contents: 'contents', listItem: 'list-item'}.inlineFlex;
       $receiver_0.alignItems = {center: 'center', end: 'end', flexEnd: 'flex-end', flexStart: 'flex-start', selfEnd: 'self-end', selfStart: 'self-start', start: 'start', baseline: 'baseline', normal: 'normal', stretch: 'stretch'}.center;
       $receiver_0.cursor = 'pointer';
-      $receiver_0.transition = 'all 0.2s ease-in-out 0s';
+      $receiver_0.transition = 'color 0.2s ease-in-out 0s';
       if (closure$selected_0)
         $receiver_0.color = Colors_getInstance().secondary;
       var $receiver_1 = {};
@@ -36056,45 +36056,71 @@ var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_
   function ProfileWorkExperience($receiver, workExperience) {
     $receiver.invoke_gax9jq$(html.ReactHTML.div, ProfileWorkExperience$lambda(workExperience));
   }
+  function WorkExperienceItem$lambda$lambda(closure$experience) {
+    return function ($receiver) {
+      var $receiver_0 = {};
+      $receiver_0.width = (10).toString() + 'vmin';
+      $receiver_0.height = (10).toString() + 'vmin';
+      $receiver_0.borderRadius = (30).toString() + '%';
+      $receiver_0.objectFit = {contain: 'contain', cover: 'cover', fill: 'fill', scaleDown: 'scale-down'}.contain;
+      $receiver_0.backgroundColor = Colors_getInstance().white;
+      $receiver.className = css($receiver_0);
+      $receiver.src = closure$experience.image;
+      return Unit;
+    };
+  }
   function WorkExperienceItem$lambda$lambda$lambda(closure$experience) {
     return function ($receiver) {
+      var $receiver_0 = {};
+      $receiver_0.fontSize = (3).toString() + 'vmin';
+      $receiver.className = css($receiver_0);
       $receiver.unaryPlus_pdl1vz$(closure$experience.company);
       return Unit;
     };
   }
   function WorkExperienceItem$lambda$lambda$lambda_0(closure$experience) {
     return function ($receiver) {
+      var $receiver_0 = {};
+      $receiver_0.fontSize = (2).toString() + 'vmin';
+      $receiver.className = css($receiver_0);
       $receiver.unaryPlus_pdl1vz$(closure$experience.dates);
       return Unit;
     };
   }
-  function WorkExperienceItem$lambda$lambda(closure$experience) {
+  function WorkExperienceItem$lambda$lambda$lambda_1(closure$experience) {
     return function ($receiver) {
       var $receiver_0 = {};
-      $receiver_0.display = {block: 'block', inline: 'inline', runIn: 'run-in', flex: 'flex', flow: 'flow', flowRoot: 'flow-root', grid: 'grid', ruby: 'ruby', table: 'table', rubyBase: 'ruby-base', rubyBaseContainer: 'ruby-base-container', rubyText: 'ruby-text', rubyTextContainer: 'ruby-text-container', tableCaption: 'table-caption', tableCell: 'table-cell', tableColumn: 'table-column', tableColumnGroup: 'table-column-group', tableFooterGroup: 'table-footer-group', tableHeaderGroup: 'table-header-group', tableRow: 'table-row', tableRowGroup: 'table-row-group', inlineBlock: 'inline-block', inlineFlex: 'inline-flex', inlineGrid: 'inline-grid', inlineListItem: 'inline-list-item', inlineTable: 'inline-table', contents: 'contents', listItem: 'list-item'}.flex;
-      $receiver_0.justifyContent = {spaceAround: 'space-around', spaceBetween: 'space-between', spaceEvenly: 'space-evenly', stretch: 'stretch', center: 'center', end: 'end', flexEnd: 'flex-end', flexStart: 'flex-start', start: 'start', left: 'left', normal: 'normal', right: 'right'}.spaceBetween;
+      $receiver_0.fontSize = (2).toString() + 'vmin';
       $receiver.className = css($receiver_0);
-      $receiver.invoke_gax9jq$(html.ReactHTML.strong, WorkExperienceItem$lambda$lambda$lambda(closure$experience));
-      $receiver.invoke_gax9jq$(html.ReactHTML.strong, WorkExperienceItem$lambda$lambda$lambda_0(closure$experience));
+      $receiver.unaryPlus_pdl1vz$(closure$experience.role);
       return Unit;
     };
   }
   function WorkExperienceItem$lambda$lambda_0(closure$experience) {
     return function ($receiver) {
-      $receiver.unaryPlus_pdl1vz$(closure$experience.role);
+      var $receiver_0 = {};
+      $receiver_0.display = {block: 'block', inline: 'inline', runIn: 'run-in', flex: 'flex', flow: 'flow', flowRoot: 'flow-root', grid: 'grid', ruby: 'ruby', table: 'table', rubyBase: 'ruby-base', rubyBaseContainer: 'ruby-base-container', rubyText: 'ruby-text', rubyTextContainer: 'ruby-text-container', tableCaption: 'table-caption', tableCell: 'table-cell', tableColumn: 'table-column', tableColumnGroup: 'table-column-group', tableFooterGroup: 'table-footer-group', tableHeaderGroup: 'table-header-group', tableRow: 'table-row', tableRowGroup: 'table-row-group', inlineBlock: 'inline-block', inlineFlex: 'inline-flex', inlineGrid: 'inline-grid', inlineListItem: 'inline-list-item', inlineTable: 'inline-table', contents: 'contents', listItem: 'list-item'}.flex;
+      $receiver_0.flexDirection = {column: 'column', columnReverse: 'column-reverse', row: 'row', rowReverse: 'row-reverse'}.column;
+      $receiver_0.marginLeft = (2).toString() + 'vmin';
+      $receiver_0.marginRight = (2).toString() + 'vmin';
+      $receiver.className = css($receiver_0);
+      $receiver.invoke_gax9jq$(html.ReactHTML.strong, WorkExperienceItem$lambda$lambda$lambda(closure$experience));
+      $receiver.invoke_gax9jq$(html.ReactHTML.span, WorkExperienceItem$lambda$lambda$lambda_0(closure$experience));
+      $receiver.invoke_gax9jq$(html.ReactHTML.span, WorkExperienceItem$lambda$lambda$lambda_1(closure$experience));
       return Unit;
     };
   }
   function WorkExperienceItem$lambda(closure$experience) {
     return function ($receiver) {
       var $receiver_0 = {};
-      $receiver_0.fontSize = (3).toString() + 'vmin';
+      $receiver_0.marginTop = (2).toString() + 'vmin';
+      $receiver_0.marginBottom = (2).toString() + 'vmin';
       $receiver_0.display = {block: 'block', inline: 'inline', runIn: 'run-in', flex: 'flex', flow: 'flow', flowRoot: 'flow-root', grid: 'grid', ruby: 'ruby', table: 'table', rubyBase: 'ruby-base', rubyBaseContainer: 'ruby-base-container', rubyText: 'ruby-text', rubyTextContainer: 'ruby-text-container', tableCaption: 'table-caption', tableCell: 'table-cell', tableColumn: 'table-column', tableColumnGroup: 'table-column-group', tableFooterGroup: 'table-footer-group', tableHeaderGroup: 'table-header-group', tableRow: 'table-row', tableRowGroup: 'table-row-group', inlineBlock: 'inline-block', inlineFlex: 'inline-flex', inlineGrid: 'inline-grid', inlineListItem: 'inline-list-item', inlineTable: 'inline-table', contents: 'contents', listItem: 'list-item'}.flex;
-      $receiver_0.flexDirection = {column: 'column', columnReverse: 'column-reverse', row: 'row', rowReverse: 'row-reverse'}.column;
       $receiver_0.whiteSpace = {breakSpaces: 'break-spaces', normal: 'normal', nowrap: 'nowrap', pre: 'pre', preLine: 'pre-line', preWrap: 'pre-wrap'}.nowrap;
+      $receiver_0.alignItems = {center: 'center', end: 'end', flexEnd: 'flex-end', flexStart: 'flex-start', selfEnd: 'self-end', selfStart: 'self-start', start: 'start', baseline: 'baseline', normal: 'normal', stretch: 'stretch'}.center;
       $receiver.className = css($receiver_0);
-      $receiver.invoke_gax9jq$(html.ReactHTML.div, WorkExperienceItem$lambda$lambda(closure$experience));
-      $receiver.invoke_gax9jq$(html.ReactHTML.span, WorkExperienceItem$lambda$lambda_0(closure$experience));
+      $receiver.invoke_gax9jq$(html.ReactHTML.img, WorkExperienceItem$lambda$lambda(closure$experience));
+      $receiver.invoke_gax9jq$(html.ReactHTML.div, WorkExperienceItem$lambda$lambda_0(closure$experience));
       return Unit;
     };
   }
@@ -36198,7 +36224,6 @@ var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_
       $receiver_0.fontSize = (3).toString() + 'vmin';
       $receiver_0.display = {block: 'block', inline: 'inline', runIn: 'run-in', flex: 'flex', flow: 'flow', flowRoot: 'flow-root', grid: 'grid', ruby: 'ruby', table: 'table', rubyBase: 'ruby-base', rubyBaseContainer: 'ruby-base-container', rubyText: 'ruby-text', rubyTextContainer: 'ruby-text-container', tableCaption: 'table-caption', tableCell: 'table-cell', tableColumn: 'table-column', tableColumnGroup: 'table-column-group', tableFooterGroup: 'table-footer-group', tableHeaderGroup: 'table-header-group', tableRow: 'table-row', tableRowGroup: 'table-row-group', inlineBlock: 'inline-block', inlineFlex: 'inline-flex', inlineGrid: 'inline-grid', inlineListItem: 'inline-list-item', inlineTable: 'inline-table', contents: 'contents', listItem: 'list-item'}.flex;
       $receiver_0.flexDirection = {column: 'column', columnReverse: 'column-reverse', row: 'row', rowReverse: 'row-reverse'}.column;
-      $receiver_0.whiteSpace = {breakSpaces: 'break-spaces', normal: 'normal', nowrap: 'nowrap', pre: 'pre', preLine: 'pre-line', preWrap: 'pre-wrap'}.nowrap;
       $receiver.className = css($receiver_0);
       $receiver.invoke_gax9jq$(html.ReactHTML.li, SkillItem$lambda$lambda(closure$skill));
       return Unit;
@@ -36792,9 +36817,10 @@ var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_
   Social.prototype.equals = function (other) {
     return this === other || (other !== null && (typeof other === 'object' && (Object.getPrototypeOf(this) === Object.getPrototypeOf(other) && (Kotlin.equals(this.name, other.name) && Kotlin.equals(this.image, other.image) && Kotlin.equals(this.url, other.url)))));
   };
-  function WorkExperience(company, role, dates) {
+  function WorkExperience(company, image, role, dates) {
     WorkExperience$Companion_getInstance();
     this.company = company;
+    this.image = image;
     this.role = role;
     this.dates = dates;
   }
@@ -36813,8 +36839,9 @@ var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_
     return WorkExperience$Companion_instance;
   }
   function WorkExperience$$serializer() {
-    this.descriptor_ddkp7f$_0 = new PluginGeneratedSerialDescriptor('model.WorkExperience', this, 3);
+    this.descriptor_ddkp7f$_0 = new PluginGeneratedSerialDescriptor('model.WorkExperience', this, 4);
     this.descriptor.addElement_ivxn3r$('company', false);
+    this.descriptor.addElement_ivxn3r$('image', false);
     this.descriptor.addElement_ivxn3r$('role', false);
     this.descriptor.addElement_ivxn3r$('dates', false);
     WorkExperience$$serializer_instance = this;
@@ -36825,14 +36852,15 @@ var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_
   WorkExperience$$serializer.prototype.serialize_55azsf$ = function (encoder, value) {
     var output = encoder.beginStructure_24f42q$(this.descriptor);
     output.encodeStringElement_iij8qq$(this.descriptor, 0, value.company);
-    output.encodeStringElement_iij8qq$(this.descriptor, 1, value.role);
-    output.encodeStringElement_iij8qq$(this.descriptor, 2, value.dates);
+    output.encodeStringElement_iij8qq$(this.descriptor, 1, value.image);
+    output.encodeStringElement_iij8qq$(this.descriptor, 2, value.role);
+    output.encodeStringElement_iij8qq$(this.descriptor, 3, value.dates);
     output.endStructure_24f42q$(this.descriptor);
   };
   WorkExperience$$serializer.prototype.deserialize_bq71mq$ = function (decoder) {
     var index;
     var bitMask0 = 0;
-    var local0, local1, local2;
+    var local0, local1, local2, local3;
     var input = decoder.beginStructure_24f42q$(this.descriptor);
     loopLabel: while (true) {
       index = input.decodeElementIndex_24f42q$(this.descriptor);
@@ -36849,6 +36877,10 @@ var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_
           local2 = input.decodeStringElement_szpzho$(this.descriptor, 2);
           bitMask0 |= 4;
           break;
+        case 3:
+          local3 = input.decodeStringElement_szpzho$(this.descriptor, 3);
+          bitMask0 |= 8;
+          break;
         case -1:
           break loopLabel;
         default:
@@ -36856,10 +36888,10 @@ var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_
       }
     }
     input.endStructure_24f42q$(this.descriptor);
-    return WorkExperience_init(bitMask0, local0, local1, local2, null);
+    return WorkExperience_init(bitMask0, local0, local1, local2, local3, null);
   };
   WorkExperience$$serializer.prototype.childSerializers = function () {
-    return [internal.StringSerializer, internal.StringSerializer, internal.StringSerializer];
+    return [internal.StringSerializer, internal.StringSerializer, internal.StringSerializer, internal.StringSerializer];
   };
   WorkExperience$$serializer.$metadata$ = {kind: Kind_OBJECT, simpleName: '$serializer', interfaces: [GeneratedSerializer]};
   var WorkExperience$$serializer_instance = null;
@@ -36869,17 +36901,21 @@ var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_
     }
     return WorkExperience$$serializer_instance;
   }
-  function WorkExperience_init(seen1, company, role, dates, serializationConstructorMarker) {
+  function WorkExperience_init(seen1, company, image, role, dates, serializationConstructorMarker) {
     var $this = serializationConstructorMarker || Object.create(WorkExperience.prototype);
     if ((seen1 & 1) === 0)
       throw MissingFieldException_init('company');
     else
       $this.company = company;
     if ((seen1 & 2) === 0)
+      throw MissingFieldException_init('image');
+    else
+      $this.image = image;
+    if ((seen1 & 4) === 0)
       throw MissingFieldException_init('role');
     else
       $this.role = role;
-    if ((seen1 & 4) === 0)
+    if ((seen1 & 8) === 0)
       throw MissingFieldException_init('dates');
     else
       $this.dates = dates;
@@ -36890,26 +36926,30 @@ var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_
     return this.company;
   };
   WorkExperience.prototype.component2 = function () {
-    return this.role;
+    return this.image;
   };
   WorkExperience.prototype.component3 = function () {
+    return this.role;
+  };
+  WorkExperience.prototype.component4 = function () {
     return this.dates;
   };
-  WorkExperience.prototype.copy_6hosri$ = function (company, role, dates) {
-    return new WorkExperience(company === void 0 ? this.company : company, role === void 0 ? this.role : role, dates === void 0 ? this.dates : dates);
+  WorkExperience.prototype.copy_w74nik$ = function (company, image, role, dates) {
+    return new WorkExperience(company === void 0 ? this.company : company, image === void 0 ? this.image : image, role === void 0 ? this.role : role, dates === void 0 ? this.dates : dates);
   };
   WorkExperience.prototype.toString = function () {
-    return 'WorkExperience(company=' + Kotlin.toString(this.company) + (', role=' + Kotlin.toString(this.role)) + (', dates=' + Kotlin.toString(this.dates)) + ')';
+    return 'WorkExperience(company=' + Kotlin.toString(this.company) + (', image=' + Kotlin.toString(this.image)) + (', role=' + Kotlin.toString(this.role)) + (', dates=' + Kotlin.toString(this.dates)) + ')';
   };
   WorkExperience.prototype.hashCode = function () {
     var result = 0;
     result = result * 31 + Kotlin.hashCode(this.company) | 0;
+    result = result * 31 + Kotlin.hashCode(this.image) | 0;
     result = result * 31 + Kotlin.hashCode(this.role) | 0;
     result = result * 31 + Kotlin.hashCode(this.dates) | 0;
     return result;
   };
   WorkExperience.prototype.equals = function (other) {
-    return this === other || (other !== null && (typeof other === 'object' && (Object.getPrototypeOf(this) === Object.getPrototypeOf(other) && (Kotlin.equals(this.company, other.company) && Kotlin.equals(this.role, other.role) && Kotlin.equals(this.dates, other.dates)))));
+    return this === other || (other !== null && (typeof other === 'object' && (Object.getPrototypeOf(this) === Object.getPrototypeOf(other) && (Kotlin.equals(this.company, other.company) && Kotlin.equals(this.image, other.image) && Kotlin.equals(this.role, other.role) && Kotlin.equals(this.dates, other.dates)))));
   };
   function Colors() {
     Colors_instance = this;
@@ -37035,7 +37075,7 @@ var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_
   package$model.Social = Social;
   Object.defineProperty(WorkExperience, 'Companion', {get: WorkExperience$Companion_getInstance});
   Object.defineProperty(WorkExperience, '$serializer', {get: WorkExperience$$serializer_getInstance});
-  package$model.WorkExperience_init_9zxaf4$ = WorkExperience_init;
+  package$model.WorkExperience_init_6zcyl3$ = WorkExperience_init;
   package$model.WorkExperience = WorkExperience;
   var package$theme = _.theme || (_.theme = {});
   Object.defineProperty(package$theme, 'Colors', {get: Colors_getInstance});
