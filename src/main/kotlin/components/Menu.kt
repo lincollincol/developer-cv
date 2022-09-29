@@ -39,7 +39,7 @@ val Menu = FC<MenuProps> { props ->
         header {
             img {
                 css {
-                    width = 75.pct
+                    width = 20.vmin
                     borderRadius = 50.pct
                     marginTop = 2.vmin
                     marginBottom = 2.vmin
@@ -121,7 +121,8 @@ private fun ChildrenBuilder.MenuOptionItem(
             display = Display.inlineFlex
             alignItems = AlignItems.center
             cursor = "pointer".unsafeCast<Cursor>()
-            transition = "all 0.2s ease-in-out 0s".unsafeCast<Transition>()
+//            transition = "all 0.2s ease-in-out 0s".unsafeCast<Transition>()
+            transition = "color 0.2s ease-in-out 0s".unsafeCast<Transition>()
             if(selected) color = Colors.secondary
             hover {
                 if(!selected) textDecoration = TextDecoration.underline

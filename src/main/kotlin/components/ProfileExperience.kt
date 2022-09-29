@@ -6,9 +6,11 @@ import model.WorkExperience
 import react.ChildrenBuilder
 import react.dom.html.ReactHTML
 import react.dom.html.ReactHTML.div
+import react.dom.html.ReactHTML.img
 import react.dom.html.ReactHTML.p
 import react.dom.html.ReactHTML.span
 import react.dom.html.ReactHTML.strong
+import theme.Colors
 
 fun ChildrenBuilder.ProfileWorkExperience(workExperience: List<WorkExperience>) {
     div {
@@ -33,21 +35,41 @@ fun ChildrenBuilder.ProfileWorkExperience(workExperience: List<WorkExperience>) 
 private fun ChildrenBuilder.WorkExperienceItem(experience: WorkExperience) {
     div {
         css {
-            fontSize = 3.vmin
+            marginTop = 2.vmin
+            marginBottom = 2.vmin
             display = Display.flex
-            flexDirection = FlexDirection.column
             whiteSpace = WhiteSpace.nowrap
-//            backgroundColor = Colors.indigo
+            alignItems = AlignItems.center
+        }
+        img {
+            css {
+                width = 10.vmin
+                height = 10.vmin
+                borderRadius = 30.pct
+                objectFit = ObjectFit.contain
+                backgroundColor = Colors.white
+            }
+            src = experience.image
         }
         div {
             css {
                 display = Display.flex
-                justifyContent = JustifyContent.spaceBetween
-//                backgroundColor = Colors.gold
+                flexDirection = FlexDirection.column
+                marginLeft = 2.vmin
+                marginRight = 2.vmin
             }
-            strong { +experience.company }
-            strong { +experience.dates }
+            strong {
+                css { fontSize = 3.vmin }
+                +experience.company
+            }
+            span {
+                css { fontSize = 2.vmin }
+                +experience.dates
+            }
+            span {
+                css { fontSize = 2.vmin }
+                +experience.role
+            }
         }
-        span { +experience.role }
     }
 }

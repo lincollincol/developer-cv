@@ -2,9 +2,13 @@ package components
 
 import csstype.*
 import emotion.react.css
+import kotlinx.browser.document
+import kotlinx.browser.window
 import model.MenuOption
 import model.Profile
 import model.WorkExperience
+import org.w3c.dom.events.Event
+import org.w3c.dom.events.EventListener
 import react.ChildrenBuilder
 import react.FC
 import react.Props

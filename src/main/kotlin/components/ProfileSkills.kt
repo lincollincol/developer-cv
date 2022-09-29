@@ -35,7 +35,6 @@ private fun ChildrenBuilder.SkillItem(skill: Skill) {
             fontSize = 3.vmin
             display = Display.flex
             flexDirection = FlexDirection.column
-            whiteSpace = WhiteSpace.nowrap
         }
         li { +skill.name }
 //        span { +skill.name }
