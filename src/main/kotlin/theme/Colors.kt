@@ -1,16 +1,12 @@
 package theme
 
 import csstype.Color
-import kotlin.math.max
-import kotlin.math.min
-import kotlin.math.round
 
 object Colors {
 
     val primary = Color("#FFFFFF")
-    val secondary = Color("#9402ff")
+    val secondary = Color("#6A5ACD")
     val surface = Color("#000000")
-
 
     val palegreen = Color("#98FB98")
     val plum = Color("#DDA0DD")

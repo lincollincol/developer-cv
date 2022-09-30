@@ -19,6 +19,9 @@ import react.dom.html.ReactHTML.p
 import react.dom.html.ReactHTML.span
 import react.dom.html.ReactHTML.strong
 import theme.Colors
+import utils.margin
+import utils.padding
+import widgets.Space
 
 external interface ContentProps : Props {
     var profile: Profile
@@ -32,21 +35,22 @@ val Content = FC<ContentProps> { props ->
             width = "fill-available".unsafeCast<Width>()
             maxHeight = 100.pct
             fontSize = 2.vmin
-            paddingLeft = 2.vmin
-            paddingRight = 2.vmin
+            padding(horizontal = 2.vmin)
             overflowY = Overflow.scroll
             backgroundColor = Colors.surface
             color = Colors.primary
-            display = Display.flex
-            alignItems = AlignItems.center
-            justifyContent = JustifyContent.center
+            display = Display.block
         }
-        when(props.selectedMenuOption) {
-            MenuOption.About -> ProfileAbout(props.profile.about)
-            MenuOption.Contact -> ProfileAbout(props.profile.about)
-            MenuOption.Projects -> ProfileProjects(props.profile.projects)
-            MenuOption.Skills -> ProfileSkills(props.profile.skills)
-            MenuOption.WorkExperience -> ProfileWorkExperience(props.profile.workExperience)
+        div {
+            css {
+                margin(vertical = 5.pct, horizontal = 15.pct)
+            }
+            when(props.selectedMenuOption) {
+                MenuOption.About -> ProfileAbout(props.profile.about)
+                MenuOption.Projects -> ProfileProjects(props.profile.projects)
+                MenuOption.Skills -> ProfileSkills(props.profile.skills)
+                MenuOption.WorkExperience -> ProfileWorkExperience(props.profile.workExperience)
+            }
         }
     }
 }

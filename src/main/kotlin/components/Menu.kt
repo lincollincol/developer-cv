@@ -17,6 +17,10 @@ import react.dom.html.ReactHTML.main
 import react.dom.html.ReactHTML.p
 import react.dom.html.ReactHTML.span
 import theme.*
+import utils.margin
+import widgets.Image
+import widgets.LinkImage
+import widgets.Text
 
 external interface MenuProps : Props {
     var profile: Profile
@@ -37,33 +41,28 @@ val Menu = FC<MenuProps> { props ->
             flexDirection = FlexDirection.column
         }
         header {
-            img {
-                css {
-                    width = 20.vmin
-                    borderRadius = 50.pct
-                    marginTop = 2.vmin
-                    marginBottom = 2.vmin
+            Image(
+                src = props.profile.image,
+                width = 20.vmin,
+                height = 20.vmin,
+                radius = 50.pct,
+                extraStyleProperties = {
                     display = Display.block
-                    marginLeft = Auto.auto
-                    marginRight = Auto.auto
+                    margin(horizontal = Auto.auto, vertical = 2.vmin)
                 }
-                src = props.profile.image
-            }
-            span {
-                css {
-                    fontSize = 3.vmin
-                    marginTop = 2.vmin
-                    fontWeight = FontWeight.bold
+            )
+            Text(
+                text = props.profile.name,
+                fontSize = 3.vmin,
+                fontWeight = FontWeight.bold,
+                extraStyleProperties = {
                     whiteSpace = WhiteSpace.nowrap
+                    margin(top = 2.vmin)
                 }
-                +props.profile.name
-            }
+            )
         }
         main {
-            css {
-                marginTop = 2.vmin
-                marginBottom = 2.vmin
-            }
+            css { margin(vertical = 2.vmin) }
             div {
                 css {
                     display = Display.flex
@@ -78,7 +77,6 @@ val Menu = FC<MenuProps> { props ->
             css {
                 marginTop = Auto.auto
                 textAlign = TextAlign.center
-                fontSize = 2.vmin
             }
             div {
                 css {
@@ -86,23 +84,22 @@ val Menu = FC<MenuProps> { props ->
                     justifyContent = JustifyContent.spaceEvenly
                 }
                 props.profile.socials.forEach {
-                    a {
-                        href = it.url
-                        target = AnchorTarget._blank
-                        img {
-                            css {
-                                filter = invert(100)
-                                width = 3.vmin
-                                height = 3.vmin
-                            }
-                            src = it.image
+                    LinkImage(
+                        src = it.image,
+                        url = it.url,
+                        width = 3.vmin,
+                        height = 3.vmin,
+                        extraStyleProperties = {
+                            filter = invert(100)
                         }
-                    }
+                    )
                 }
             }
-            p {
-                +"© 2022 lincollincol"
-            }
+            Text(
+                text = "© 2022 lincollincol",
+                fontSize = 2.vmin,
+                extraStyleProperties = { margin(vertical = 2.vmin) }
+            )
         }
     }
 }

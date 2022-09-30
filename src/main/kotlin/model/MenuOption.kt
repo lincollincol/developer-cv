@@ -7,7 +7,6 @@ sealed class MenuOption(
     object WorkExperience : MenuOption("Work Experience")
     object Skills : MenuOption("Skills")
     object Projects : MenuOption("Projects")
-    object Contact : MenuOption("Contact")
 
     companion object {
         fun items() = listOf(About, WorkExperience, Skills, Projects)

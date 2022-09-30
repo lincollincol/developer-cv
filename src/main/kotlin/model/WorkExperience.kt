@@ -7,5 +7,6 @@ data class WorkExperience(
     val company: String,
     val image: String,
     val role: String,
-    val dates: String
+    val dates: String,
+    val responsibilities: List<Responsibility>,
 )

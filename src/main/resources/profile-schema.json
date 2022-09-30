@@ -7,25 +7,70 @@
       "company": "Deviark",
       "image": "img/deviark.png",
       "role": "Android Developer",
-      "dates": "Mar 2021 — Present (1 y. 7 mon.)"
+      "dates": "Mar 2021 — Present (1 y. 7 mon.)",
+      "responsibilities": [
+        {
+          "name": "responsibility 1"
+        },
+        {
+          "name": "responsibility 2"
+        },
+        {
+          "name": "responsibility 3"
+        }
+      ]
     },
     {
       "company": "Freelance",
       "image": "img/freelance.png",
       "role": "Android Developer",
-      "dates": "Jul 2020 — Oct 2020 (4 mon.)"
+      "dates": "Jul 2020 — Oct 2020 (4 mon.)",
+      "responsibilities": [
+        {
+          "name": "responsibility 1"
+        },
+        {
+          "name": "responsibility 2"
+        },
+        {
+          "name": "responsibility 3"
+        },
+        {
+          "name": "responsibility 4"
+        }
+      ]
+
     },
     {
       "company": "InRating",
       "image": "img/inrating.webp",
       "role": "Android Developer",
-      "dates": "Apr 2020 — Sep 2020 (6 mon.)"
+      "dates": "Apr 2020 — Sep 2020 (6 mon.)",
+      "responsibilities": [
+        {
+          "name": "responsibility 1"
+        },
+        {
+          "name": "responsibility 2"
+        }
+      ]
     },
     {
       "company": "Freelance",
       "image": "img/freelance.png",
       "role": "Android Developer",
-      "dates": "Sep 2019 — Mar 2020 (7 mon.)"
+      "dates": "Sep 2019 — Mar 2020 (7 mon.)",
+      "responsibilities": [
+        {
+          "name": "responsibility 1"
+        },
+        {
+          "name": "responsibility 2"
+        },
+        {
+          "name": "responsibility 3"
+        }
+      ]
     }
   ],
   "skills": [

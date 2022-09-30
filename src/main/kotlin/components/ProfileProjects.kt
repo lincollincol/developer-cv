@@ -3,29 +3,20 @@ package components
 import csstype.*
 import emotion.react.css
 import model.Project
-import model.Skill
 import react.ChildrenBuilder
 import react.dom.html.AnchorTarget
-import react.dom.html.ReactHTML
 import react.dom.html.ReactHTML.a
 import react.dom.html.ReactHTML.div
-import react.dom.html.ReactHTML.p
 import react.dom.html.ReactHTML.span
+import widgets.TitleText
 
 fun ChildrenBuilder.ProfileProjects(projects: List<Project>) {
     div {
         css {
-            width = 70.pct
             display = Display.flex
             flexDirection = FlexDirection.column
         }
-        p {
-            css {
-                fontSize = 6.vmin
-                fontWeight = FontWeight.bold
-            }
-            +"Projects"
-        }
+        TitleText("Projects")
         projects.forEach { project ->
             ProjectItem(project)
         }

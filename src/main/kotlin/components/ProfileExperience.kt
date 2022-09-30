@@ -4,71 +4,65 @@ import csstype.*
 import emotion.react.css
 import model.WorkExperience
 import react.ChildrenBuilder
-import react.dom.html.ReactHTML
 import react.dom.html.ReactHTML.div
 import react.dom.html.ReactHTML.img
-import react.dom.html.ReactHTML.p
-import react.dom.html.ReactHTML.span
-import react.dom.html.ReactHTML.strong
+import react.dom.html.ReactHTML.li
 import theme.Colors
+import utils.margin
+import widgets.Image
+import widgets.LinkText
+import widgets.Text
+import widgets.TitleText
 
 fun ChildrenBuilder.ProfileWorkExperience(workExperience: List<WorkExperience>) {
     div {
         css {
-            width = 70.pct
             display = Display.flex
             flexDirection = FlexDirection.column
         }
-        p {
-            css {
-                fontSize = 6.vmin
-                fontWeight = FontWeight.bold
-            }
-            +"Jobs history"
-        }
+        TitleText("Jobs history")
         workExperience.forEach { experience ->
             WorkExperienceItem(experience)
         }
     }
 }
 
-private fun ChildrenBuilder.WorkExperienceItem(experience: WorkExperience) {
+private fun ChildrenBuilder.WorkExperienceItem(workExperience: WorkExperience) {
     div {
         css {
-            marginTop = 2.vmin
-            marginBottom = 2.vmin
             display = Display.flex
-            whiteSpace = WhiteSpace.nowrap
-            alignItems = AlignItems.center
-        }
-        img {
-            css {
-                width = 10.vmin
-                height = 10.vmin
-                borderRadius = 30.pct
-                objectFit = ObjectFit.contain
-                backgroundColor = Colors.white
-            }
-            src = experience.image
+            flexDirection = FlexDirection.column
         }
         div {
             css {
+                margin(vertical = 2.vmin)
                 display = Display.flex
-                flexDirection = FlexDirection.column
-                marginLeft = 2.vmin
-                marginRight = 2.vmin
+                alignItems = AlignItems.center
             }
-            strong {
-                css { fontSize = 3.vmin }
-                +experience.company
+            Image(
+                src = workExperience.image,
+                width = 10.vmin,
+                height = 10.vmin,
+                radius = 30.pct
+            )
+            div {
+                css {
+                    margin(horizontal = 2.vmin)
+                    display = Display.flex
+                    flexDirection = FlexDirection.column
+                }
+                LinkText(workExperience.company, "", fontWeight = FontWeight.bold)
+                Text(workExperience.dates, fontSize = 2.vmin)
+                Text(workExperience.role, fontSize = 2.vmin)
+
             }
-            span {
-                css { fontSize = 2.vmin }
-                +experience.dates
+        }
+        div {
+            css {
+                margin(left = 10.vmin)
             }
-            span {
-                css { fontSize = 2.vmin }
-                +experience.role
+            workExperience.responsibilities.forEach {
+                li { +it.name }
             }
         }
     }
