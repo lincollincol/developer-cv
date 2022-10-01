@@ -18,9 +18,8 @@ import react.dom.html.ReactHTML.p
 import react.dom.html.ReactHTML.span
 import theme.*
 import utils.margin
-import widgets.Image
-import widgets.LinkImage
-import widgets.Text
+import utils.padding
+import widgets.*
 
 external interface MenuProps : Props {
     var profile: Profile
@@ -44,7 +43,7 @@ val Menu = FC<MenuProps> { props ->
             Image(
                 src = props.profile.image,
                 width = 20.vmin,
-                height = 20.vmin,
+                height = Auto.auto,
                 radius = 50.pct,
                 extraStyleProperties = {
                     display = Display.block
@@ -63,69 +62,57 @@ val Menu = FC<MenuProps> { props ->
         }
         main {
             css { margin(vertical = 2.vmin) }
-            div {
-                css {
-                    display = Display.flex
-                    flexDirection = FlexDirection.column
-                }
-                props.options.forEach {
-                    MenuOptionItem(it, it == props.selectedMenuOption) { props.onItemClick(it) }
-                }
+            Column(
+                items = props.options
+            ) { menuOption ->
+                val selected = menuOption == props.selectedMenuOption
+                Text(
+                    text = menuOption.title,
+                    fontWeight = FontWeight.bold,
+                    fontSize = 2.5.vmin,
+                    onClick = { props.onItemClick(menuOption) },
+                    extraStyleProperties = {
+                        width = 100.pct
+                        height = 5.vmin
+                        display = Display.inlineFlex
+                        alignItems = AlignItems.center
+                        cursor = "pointer".unsafeCast<Cursor>()
+                        transition = "color 0.2s ease-in-out 0s".unsafeCast<Transition>()
+                        if(selected) color = Colors.secondary
+                        hover {
+                            if(!selected) textDecoration = TextDecoration.underline
+                        }
+                    }
+                )
             }
         }
         footer {
             css {
                 marginTop = Auto.auto
                 textAlign = TextAlign.center
+//                margin(vertical = 2.vmin)
             }
-            div {
-                css {
-                    display = Display.flex
-                    justifyContent = JustifyContent.spaceEvenly
+            Row(
+                items = props.profile.socials,
+                justifyContent = JustifyContent.spaceEvenly,
+                extraStyleProperties = {
+                    margin(vertical = 2.vmin)
                 }
-                props.profile.socials.forEach {
-                    LinkImage(
-                        src = it.image,
-                        url = it.url,
-                        width = 3.vmin,
-                        height = 3.vmin,
-                        extraStyleProperties = {
-                            filter = invert(100)
-                        }
-                    )
-                }
+            ) {
+                LinkImage(
+                    src = it.image,
+                    url = it.url,
+                    width = 3.vmin,
+                    height = 3.vmin,
+                    extraStyleProperties = {
+                        filter = invert(100)
+                    }
+                )
             }
             Text(
                 text = "© 2022 lincollincol",
-                fontSize = 2.vmin,
-                extraStyleProperties = { margin(vertical = 2.vmin) }
+                fontSize = 2.vmin
             )
         }
-    }
-}
-
-private fun ChildrenBuilder.MenuOptionItem(
-    option: MenuOption,
-    selected: Boolean,
-    onClick: () -> Unit
-) {
-    span {
-        css {
-            width = 100.pct
-            height = 5.vmin
-            fontSize = 2.5.vmin
-            fontWeight = FontWeight.bold
-            display = Display.inlineFlex
-            alignItems = AlignItems.center
-            cursor = "pointer".unsafeCast<Cursor>()
-//            transition = "all 0.2s ease-in-out 0s".unsafeCast<Transition>()
-            transition = "color 0.2s ease-in-out 0s".unsafeCast<Transition>()
-            if(selected) color = Colors.secondary
-            hover {
-                if(!selected) textDecoration = TextDecoration.underline
-            }
-        }
-        this.onClick = { onClick() }
-        +option.title
     }
 }

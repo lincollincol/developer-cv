@@ -54,13 +54,10 @@ private fun ChildrenBuilder.WorkExperienceItem(workExperience: WorkExperience) {
                 LinkText(workExperience.company, "", fontWeight = FontWeight.bold)
                 Text(workExperience.dates, fontSize = 2.vmin)
                 Text(workExperience.role, fontSize = 2.vmin)
-
             }
         }
         div {
-            css {
-                margin(left = 10.vmin)
-            }
+            css { margin(left = 12.vmin) }
             workExperience.responsibilities.forEach {
                 li { +it.name }
             }
