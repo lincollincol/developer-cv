@@ -8,6 +8,7 @@ import react.ChildrenBuilder
 import react.FC
 import react.Props
 import react.dom.html.AnchorTarget
+import react.dom.html.ReactHTML
 import react.dom.html.ReactHTML.a
 import react.dom.html.ReactHTML.div
 import react.dom.html.ReactHTML.footer
@@ -86,11 +87,11 @@ val Menu = FC<MenuProps> { props ->
                 )
             }
         }
+
         footer {
             css {
-                marginTop = Auto.auto
+                margin(top = Auto.auto, bottom = 2.vmin)
                 textAlign = TextAlign.center
-//                margin(vertical = 2.vmin)
             }
             Row(
                 items = props.profile.socials,

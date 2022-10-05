@@ -3,4 +3,7 @@ package model
 import kotlinx.serialization.Serializable
 
 @Serializable
-data class Skill(val name: String)
+data class Skill(
+    val name: String,
+    val group: String
+)

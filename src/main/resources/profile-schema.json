@@ -75,46 +75,164 @@
   ],
   "skills": [
     {
-      "name": "Developing Android applications using Kotlin and Java languages"
+      "name": "Kotlin",
+      "group": "Common"
     },
     {
-      "name": "Android SDK and Android NDK"
+      "name": "Java",
+      "group": "Common"
     },
     {
-      "name": "Android Architecture Components (Room, ViewModel etc.)"
+      "name": "Android SDK/NDK",
+      "group": "Common"
     },
     {
-      "name": "Clean Architecture, MVP, MVI, MVVM patterns and SOLID principles"
+      "name": "Git",
+      "group": "Common"
     },
     {
-      "name": "OkHttp, Retrofit2, Volley, JSch (sftp), Ktor"
+      "name": "MVVM",
+      "group": "Architecture"
     },
     {
-      "name": "Gson, Kotlin Serialization"
+      "name": "MVI",
+      "group": "Architecture"
     },
     {
-      "name": "Firebase (storage, database, firestore, analytics etc.), GeoFirestore"
+      "name": "MVP",
+      "group": "Architecture"
     },
     {
-      "name": "RxJava, Kotlin Coroutines and Flow"
+      "name": "Clean Architecture",
+      "group": "Architecture"
     },
     {
-      "name": "Koin, Hilt"
+      "name": "SOLID principles",
+      "group": "Architecture"
     },
     {
-      "name": "Cicerone, ExoPlayer, Glide"
+      "name": "Jetpack Compose",
+      "group": "Android Ui"
     },
     {
-      "name": "GoogleMaps, Voximplant, FFmpeg"
+      "name": "View (XML)/Custom view",
+      "group": "Android Ui"
     },
     {
-      "name": "ViewBinding, DataBinding"
+      "name": "ViewBinding/DataBinding",
+      "group": "Android Ui"
     },
     {
-      "name": "MotionLayout, Lottine, Transition API, Groupie, CustomView etc."
+      "name": "Animations (MotionLayout, Transition API, Lottie etc.)",
+      "group": "Android Ui"
     },
     {
-      "name": "Git versions control system"
+      "name": "Groupie",
+      "group": "Android Ui"
+    },
+    {
+      "name": "Glide",
+      "group": "Android Ui"
+    },
+    {
+      "name": "Android Architecture Components (Room, ViewModel, LiveData, Paging3, DataStore etc.)",
+      "group": "Google tools"
+    },
+    {
+      "name": "Firebase (Firestore, Auth, Storage, Analytics etc.)",
+      "group": "Google tools"
+    },
+    {
+      "name": "GoogleMap",
+      "group": "Google tools"
+    },
+    {
+      "name": "Navigation Components",
+      "group": "Navigation"
+    },
+    {
+      "name": "Cicerone",
+      "group": "Navigation"
+    },
+    {
+      "name": "Custom navigation",
+      "group": "Navigation"
+    },
+    {
+      "name": "OkHttp",
+      "group": "Network"
+    },
+    {
+      "name": "Retrofit2",
+      "group": "Network"
+    },
+    {
+      "name": "Ktor (Client/Server)",
+      "group": "Network"
+    },
+    {
+      "name": "Volley",
+      "group": "Network"
+    },
+    {
+      "name": "JSch (SFTP)",
+      "group": "Network"
+    },
+    {
+      "name": "Gson",
+      "group": "Serialization"
+    },
+    {
+      "name": "Kotlin Serialization",
+      "group": "Serialization"
+    },
+    {
+      "name": "Dagger Hilt",
+      "group": "Dependency injection"
+    },
+    {
+      "name": "Koin",
+      "group": "Dependency injection"
+    },
+    {
+      "name": "Kotlin coroutines/flow",
+      "group": "Concurrency"
+    },
+    {
+      "name": "RxJava/RxAndroid",
+      "group": "Concurrency"
+    },
+    {
+      "name": "ExoPlayer",
+      "group": "Media"
+    },
+    {
+      "name": "Media3",
+      "group": "Media"
+    },
+    {
+      "name": "FFMPEG",
+      "group": "Media"
+    },
+    {
+      "name": "Voximplant (audio/video calls)",
+      "group": "Other tools"
+    },
+    {
+      "name": "QuickBlox",
+      "group": "Other tools"
+    },
+    {
+      "name": "GeoFirestore",
+      "group": "Other tools"
+    },
+    {
+      "name": "SceneView (ARCore)",
+      "group": "Other tools"
+    },
+    {
+      "name": "etc.",
+      "group": "Other tools"
     }
   ],
   "projects": [

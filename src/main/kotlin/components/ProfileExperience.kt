@@ -9,10 +9,7 @@ import react.dom.html.ReactHTML.img
 import react.dom.html.ReactHTML.li
 import theme.Colors
 import utils.margin
-import widgets.Image
-import widgets.LinkText
-import widgets.Text
-import widgets.TitleText
+import widgets.*
 
 fun ChildrenBuilder.ProfileWorkExperience(workExperience: List<WorkExperience>) {
     div {
@@ -30,6 +27,7 @@ fun ChildrenBuilder.ProfileWorkExperience(workExperience: List<WorkExperience>) 
 private fun ChildrenBuilder.WorkExperienceItem(workExperience: WorkExperience) {
     div {
         css {
+//            margin(vertical = 2.vmin)
             display = Display.flex
             flexDirection = FlexDirection.column
         }
@@ -41,8 +39,8 @@ private fun ChildrenBuilder.WorkExperienceItem(workExperience: WorkExperience) {
             }
             Image(
                 src = workExperience.image,
-                width = 10.vmin,
-                height = 10.vmin,
+                width = 12.vmin,
+                height = 12.vmin,
                 radius = 30.pct
             )
             div {
@@ -52,15 +50,15 @@ private fun ChildrenBuilder.WorkExperienceItem(workExperience: WorkExperience) {
                     flexDirection = FlexDirection.column
                 }
                 LinkText(workExperience.company, "", fontWeight = FontWeight.bold)
-                Text(workExperience.dates, fontSize = 2.vmin)
-                Text(workExperience.role, fontSize = 2.vmin)
+                Text(workExperience.dates, fontSize = 2.5.vmin)
+                Text(workExperience.role, fontSize = 2.5.vmin)
             }
         }
-        div {
-            css { margin(left = 12.vmin) }
-            workExperience.responsibilities.forEach {
-                li { +it.name }
-            }
+        Column(
+            items = workExperience.responsibilities,
+            extraStyleProperties = { margin(left = 14.vmin) }
+        ) {
+            ListText(it.name, fontSize = 2.5.vmin)
         }
     }
 }
