@@ -28,6 +28,7 @@ object Colors {
     val fuchsia = Color("#FF00FF")
     val slateblue = Color("#6A5ACD")
     val black = Color("#000000")
+    val black50 = Color("#80000000")
     val white = Color("#FFFFFF")
     val white90 = Color("#E6FFFFFF")
     val white80 = Color("#CCFFFFFF")

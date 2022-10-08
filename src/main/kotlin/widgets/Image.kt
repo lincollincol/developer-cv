@@ -16,7 +16,8 @@ fun ChildrenBuilder.Image(
     radius: BorderRadius = 30.pct,
     fit: ObjectFit = ObjectFit.contain,
     backgroundColor: BackgroundColor = Colors.primary,
-    extraStyleProperties: (PropertiesBuilder.() -> Unit)? = null
+    extraStyleProperties: (PropertiesBuilder.() -> Unit)? = null,
+    onClick: (() -> Unit)? = null,
 ) {
     img {
         css {
@@ -28,6 +29,7 @@ fun ChildrenBuilder.Image(
             extraStyleProperties?.invoke(this)
         }
         this.src = src
+        this.onClick = { onClick?.invoke() }
     }
 }
 

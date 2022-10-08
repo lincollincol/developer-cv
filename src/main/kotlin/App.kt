@@ -1,6 +1,8 @@
 import components.Content
 import components.Menu
-import csstype.*
+import csstype.Display
+import csstype.FontFamily
+import csstype.pct
 import emotion.react.css
 import kotlinx.serialization.decodeFromString
 import kotlinx.serialization.json.Json
@@ -19,12 +21,13 @@ val App = FC<Props> {
 
     var currentMenuOption: MenuOption by useState(MenuOption.About)
     var profile: Profile? by useState(null)
+
     useEffectOnce {
         readFile("profile-schema.json") {
             profile = Json.decodeFromString(it)
         }
-//        readJson<Profile>("profile-schema.json") { profile = it }
     }
+
     profile?.let {
         div {
             css {
@@ -48,8 +51,8 @@ val App = FC<Props> {
                 this.selectedMenuOption = currentMenuOption
             }
         }
-
     }
+
 }
 
 

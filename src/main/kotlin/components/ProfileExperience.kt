@@ -27,7 +27,6 @@ fun ChildrenBuilder.ProfileWorkExperience(workExperience: List<WorkExperience>) 
 private fun ChildrenBuilder.WorkExperienceItem(workExperience: WorkExperience) {
     div {
         css {
-//            margin(vertical = 2.vmin)
             display = Display.flex
             flexDirection = FlexDirection.column
         }
@@ -41,7 +40,7 @@ private fun ChildrenBuilder.WorkExperienceItem(workExperience: WorkExperience) {
                 src = workExperience.image,
                 width = 12.vmin,
                 height = 12.vmin,
-                radius = 30.pct
+                radius = 25.pct
             )
             div {
                 css {

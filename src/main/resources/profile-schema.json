@@ -5,9 +5,9 @@
   "workExperience": [
     {
       "company": "Deviark",
-      "image": "img/deviark.png",
+      "image": "img/company/deviark.png",
       "role": "Android Developer",
-      "dates": "Mar 2021 — Present (1 y. 7 mon.)",
+      "dates": "Mar 2021 — Present (1 y. 8 mon.)",
       "responsibilities": [
         {
           "name": "responsibility 1"
@@ -22,7 +22,7 @@
     },
     {
       "company": "Freelance",
-      "image": "img/freelance.png",
+      "image": "img/company/freelance.png",
       "role": "Android Developer",
       "dates": "Jul 2020 — Oct 2020 (4 mon.)",
       "responsibilities": [
@@ -43,7 +43,7 @@
     },
     {
       "company": "InRating",
-      "image": "img/inrating.webp",
+      "image": "img/company/inrating.png",
       "role": "Android Developer",
       "dates": "Apr 2020 — Sep 2020 (6 mon.)",
       "responsibilities": [
@@ -57,7 +57,7 @@
     },
     {
       "company": "Freelance",
-      "image": "img/freelance.png",
+      "image": "img/company/freelance.png",
       "role": "Android Developer",
       "dates": "Sep 2019 — Mar 2020 (7 mon.)",
       "responsibilities": [
@@ -265,22 +265,22 @@
   "socials": [
     {
       "name": "Github",
-      "image": "img/github.png",
+      "image": "img/social/github.png",
       "url": "https://github.com/lincollincol"
     },
     {
       "name": "StackOverflow",
-      "image": "img/stack-overflow.png",
+      "image": "img/social/stack-overflow.png",
       "url": "https://stackoverflow.com/users/9949259/lincollincol"
     },
     {
       "name": "LinkedIn",
-      "image": "img/linkedin.png",
+      "image": "img/social/linkedin.png",
       "url": "https://www.linkedin.com/in/andrew-linc-5976b0169/"
     },
     {
       "name": "Medium",
-      "image": "img/medium.png",
+      "image": "img/social/medium.png",
       "url": "https://medium.com/@lincollincol"
     }
   ]
