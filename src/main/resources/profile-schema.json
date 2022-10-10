@@ -237,27 +237,44 @@
   ],
   "projects": [
     {
-      "name": "WaveformSeekbar (open source)",
-      "description": "Android Waveform SeekBar library",
-      "url": "https://github.com/massoudss/waveformSeekBar"
+      "name": "AudioWaveform (open source)",
+      "image": "img/project/audio-waveform.png",
+      "description": "Android library that calculates amplitudes from audio and provides data to draw",
+      "url": "https://github.com/lincollincol/compose-audiowaveform"
     },
     {
       "name": "Amplituda (open source)",
+      "image": "img/project/amplituda.png",
       "description": "Android library that calculates amplitudes from audio and provides data to draw",
       "url": "https://github.com/lincollincol/Amplituda"
     },
     {
-      "name": "AudioTool (open source)",
+      "name": "WaveformSeekbar (open source)",
+      "image": "",
+      "description": "Android Waveform SeekBar library",
+      "url": "https://github.com/massoudss/waveformSeekBar"
+    },
+    {
+      "name": "InPhoto (open source)",
+      "image": "img/project/inphoto.png",
       "description": "Android library that provides audio manipulation functions like increase/decrease speed, pitch, volume, bass, etc. Library also provides cut, noise remover, and other interesting and helpfull functions",
       "url": "https://github.com/lincollincol/AudioTool"
     },
     {
       "name": "Vixinity",
+      "image": "img/project/vixinity.png",
+      "description": "Social platform for residential compounds with news, ads, ability to order food & chat with app users",
+      "url": ""
+    },
+    {
+      "name": "my-vpa",
+      "image": "img/project/vpa.png",
       "description": "Social platform for residential compounds with news, ads, ability to order food & chat with app users",
       "url": ""
     },
     {
       "name": "TopTalk messenger",
+      "image": "img/project/toptalk.png",
       "description": "Messenger that translates messages to your native language",
       "url": ""
     }

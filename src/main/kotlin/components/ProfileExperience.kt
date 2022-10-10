@@ -5,9 +5,6 @@ import emotion.react.css
 import model.WorkExperience
 import react.ChildrenBuilder
 import react.dom.html.ReactHTML.div
-import react.dom.html.ReactHTML.img
-import react.dom.html.ReactHTML.li
-import theme.Colors
 import utils.margin
 import widgets.*
 
@@ -53,7 +50,7 @@ private fun ChildrenBuilder.WorkExperienceItem(workExperience: WorkExperience) {
                 Text(workExperience.role, fontSize = 2.5.vmin)
             }
         }
-        Column(
+        ColumnList(
             items = workExperience.responsibilities,
             extraStyleProperties = { margin(left = 14.vmin) }
         ) {

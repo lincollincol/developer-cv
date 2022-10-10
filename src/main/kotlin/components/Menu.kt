@@ -4,22 +4,14 @@ import csstype.*
 import emotion.react.css
 import model.MenuOption
 import model.Profile
-import react.ChildrenBuilder
 import react.FC
 import react.Props
-import react.dom.html.AnchorTarget
-import react.dom.html.ReactHTML
-import react.dom.html.ReactHTML.a
 import react.dom.html.ReactHTML.div
 import react.dom.html.ReactHTML.footer
 import react.dom.html.ReactHTML.header
-import react.dom.html.ReactHTML.img
 import react.dom.html.ReactHTML.main
-import react.dom.html.ReactHTML.p
-import react.dom.html.ReactHTML.span
 import theme.*
 import utils.margin
-import utils.padding
 import widgets.*
 
 external interface MenuProps : Props {
@@ -63,7 +55,7 @@ val Menu = FC<MenuProps> { props ->
         }
         main {
             css { margin(vertical = 2.vmin) }
-            Column(
+            ColumnList(
                 items = props.options
             ) { menuOption ->
                 val selected = menuOption == props.selectedMenuOption
@@ -93,7 +85,7 @@ val Menu = FC<MenuProps> { props ->
                 margin(top = Auto.auto, bottom = 2.vmin)
                 textAlign = TextAlign.center
             }
-            Row(
+            RowList(
                 items = props.profile.socials,
                 justifyContent = JustifyContent.spaceEvenly,
                 extraStyleProperties = {
