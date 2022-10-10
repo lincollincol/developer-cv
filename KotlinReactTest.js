@@ -35700,7 +35700,12 @@ var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_
   var create = $module$kotlin_react.react.create_r7bapy$;
   var equals = Kotlin.equals;
   var Auto$auto = {auto: 'auto'}.auto;
-  var AnchorTarget$_blank = {_self: '_self', _blank: '_blank', _parent: '_parent', _top: '_top'}._blank;
+  var unboxChar = Kotlin.unboxChar;
+  var isUpperCase = Kotlin.kotlin.text.isUpperCase_myv2d0$;
+  var StringBuilder_init = Kotlin.kotlin.text.StringBuilder_init;
+  var toBoxedChar = Kotlin.toBoxedChar;
+  var LinkedHashMap_init = Kotlin.kotlin.collections.LinkedHashMap_init_q3lmfv$;
+  var ArrayList_init = Kotlin.kotlin.collections.ArrayList_init_287e2$;
   var Kind_OBJECT = Kotlin.Kind.OBJECT;
   var listOf = Kotlin.kotlin.collections.listOf_i5x0yv$;
   var Kind_CLASS = Kotlin.Kind.CLASS;
@@ -35710,6 +35715,8 @@ var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_
   var internal = $module$kotlinx_serialization_kotlinx_serialization_core_js_legacy.kotlinx.serialization.internal;
   var GeneratedSerializer = $module$kotlinx_serialization_kotlinx_serialization_core_js_legacy.kotlinx.serialization.internal.GeneratedSerializer;
   var MissingFieldException_init = $module$kotlinx_serialization_kotlinx_serialization_core_js_legacy.kotlinx.serialization.MissingFieldException_init_61zpoe$;
+  var AnchorTarget$_blank = {_self: '_self', _blank: '_blank', _parent: '_parent', _top: '_top'}._blank;
+  var None$none = {none: 'none'}.none;
   MenuOption$About.prototype = Object.create(MenuOption.prototype);
   MenuOption$About.prototype.constructor = MenuOption$About;
   MenuOption$WorkExperience.prototype = Object.create(MenuOption.prototype);
@@ -35718,8 +35725,6 @@ var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_
   MenuOption$Skills.prototype.constructor = MenuOption$Skills;
   MenuOption$Projects.prototype = Object.create(MenuOption.prototype);
   MenuOption$Projects.prototype.constructor = MenuOption$Projects;
-  MenuOption$Contact.prototype = Object.create(MenuOption.prototype);
-  MenuOption$Contact.prototype.constructor = MenuOption$Contact;
   function App$lambda$lambda$lambda(closure$profile) {
     return function (it) {
       var tmp$ = closure$profile;
@@ -35788,27 +35793,14 @@ var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_
     var container = document.getElementById('root');
     createRoot(ensureNotNull(container)).render(create(App));
   }
-  function Content$lambda$lambda(closure$props) {
+  function Content$lambda$lambda$lambda(closure$props) {
     return function ($receiver) {
       var tmp$;
       var $receiver_0 = {};
-      $receiver_0.height = (100).toString() + '%';
-      $receiver_0.width = 'fill-available';
-      $receiver_0.maxHeight = (100).toString() + '%';
-      $receiver_0.fontSize = (2).toString() + 'vmin';
-      $receiver_0.paddingLeft = (2).toString() + 'vmin';
-      $receiver_0.paddingRight = (2).toString() + 'vmin';
-      $receiver_0.overflowY = {clip: 'clip', hidden: 'hidden', scroll: 'scroll', visible: 'visible'}.scroll;
-      $receiver_0.backgroundColor = Colors_getInstance().surface;
-      $receiver_0.color = Colors_getInstance().primary;
-      $receiver_0.display = {block: 'block', inline: 'inline', runIn: 'run-in', flex: 'flex', flow: 'flow', flowRoot: 'flow-root', grid: 'grid', ruby: 'ruby', table: 'table', rubyBase: 'ruby-base', rubyBaseContainer: 'ruby-base-container', rubyText: 'ruby-text', rubyTextContainer: 'ruby-text-container', tableCaption: 'table-caption', tableCell: 'table-cell', tableColumn: 'table-column', tableColumnGroup: 'table-column-group', tableFooterGroup: 'table-footer-group', tableHeaderGroup: 'table-header-group', tableRow: 'table-row', tableRowGroup: 'table-row-group', inlineBlock: 'inline-block', inlineFlex: 'inline-flex', inlineGrid: 'inline-grid', inlineListItem: 'inline-list-item', inlineTable: 'inline-table', contents: 'contents', listItem: 'list-item'}.flex;
-      $receiver_0.alignItems = {center: 'center', end: 'end', flexEnd: 'flex-end', flexStart: 'flex-start', selfEnd: 'self-end', selfStart: 'self-start', start: 'start', baseline: 'baseline', normal: 'normal', stretch: 'stretch'}.center;
-      $receiver_0.justifyContent = {spaceAround: 'space-around', spaceBetween: 'space-between', spaceEvenly: 'space-evenly', stretch: 'stretch', center: 'center', end: 'end', flexEnd: 'flex-end', flexStart: 'flex-start', start: 'start', left: 'left', normal: 'normal', right: 'right'}.center;
+      margin_0($receiver_0, (5).toString() + '%', (15).toString() + '%');
       $receiver.className = css($receiver_0);
       tmp$ = closure$props.selectedMenuOption;
       if (equals(tmp$, MenuOption$About_getInstance()))
-        ProfileAbout($receiver, closure$props.profile.about);
-      else if (equals(tmp$, MenuOption$Contact_getInstance()))
         ProfileAbout($receiver, closure$props.profile.about);
       else if (equals(tmp$, MenuOption$Projects_getInstance()))
         ProfileProjects($receiver, closure$props.profile.projects);
@@ -35819,125 +35811,107 @@ var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_
       return Unit;
     };
   }
+  function Content$lambda$lambda(closure$props) {
+    return function ($receiver) {
+      var $receiver_0 = {};
+      $receiver_0.height = (100).toString() + '%';
+      $receiver_0.width = 'fill-available';
+      $receiver_0.maxHeight = (100).toString() + '%';
+      $receiver_0.fontSize = (2).toString() + 'vmin';
+      padding_0($receiver_0, void 0, (2).toString() + 'vmin');
+      $receiver_0.overflowY = {clip: 'clip', hidden: 'hidden', scroll: 'scroll', visible: 'visible'}.scroll;
+      $receiver_0.backgroundColor = Colors_getInstance().surface;
+      $receiver_0.color = Colors_getInstance().primary;
+      $receiver_0.display = {block: 'block', inline: 'inline', runIn: 'run-in', flex: 'flex', flow: 'flow', flowRoot: 'flow-root', grid: 'grid', ruby: 'ruby', table: 'table', rubyBase: 'ruby-base', rubyBaseContainer: 'ruby-base-container', rubyText: 'ruby-text', rubyTextContainer: 'ruby-text-container', tableCaption: 'table-caption', tableCell: 'table-cell', tableColumn: 'table-column', tableColumnGroup: 'table-column-group', tableFooterGroup: 'table-footer-group', tableHeaderGroup: 'table-header-group', tableRow: 'table-row', tableRowGroup: 'table-row-group', inlineBlock: 'inline-block', inlineFlex: 'inline-flex', inlineGrid: 'inline-grid', inlineListItem: 'inline-list-item', inlineTable: 'inline-table', contents: 'contents', listItem: 'list-item'}.block;
+      $receiver.className = css($receiver_0);
+      $receiver.invoke_gax9jq$(html.ReactHTML.div, Content$lambda$lambda$lambda(closure$props));
+      return Unit;
+    };
+  }
   function Content$lambda($receiver, props) {
     $receiver.invoke_gax9jq$(html.ReactHTML.div, Content$lambda$lambda(props));
     return Unit;
   }
   var Content;
-  function Menu$lambda$lambda$lambda$lambda(closure$props) {
-    return function ($receiver) {
-      var $receiver_0 = {};
-      $receiver_0.width = (20).toString() + 'vmin';
-      $receiver_0.borderRadius = (50).toString() + '%';
-      $receiver_0.marginTop = (2).toString() + 'vmin';
-      $receiver_0.marginBottom = (2).toString() + 'vmin';
-      $receiver_0.display = {block: 'block', inline: 'inline', runIn: 'run-in', flex: 'flex', flow: 'flow', flowRoot: 'flow-root', grid: 'grid', ruby: 'ruby', table: 'table', rubyBase: 'ruby-base', rubyBaseContainer: 'ruby-base-container', rubyText: 'ruby-text', rubyTextContainer: 'ruby-text-container', tableCaption: 'table-caption', tableCell: 'table-cell', tableColumn: 'table-column', tableColumnGroup: 'table-column-group', tableFooterGroup: 'table-footer-group', tableHeaderGroup: 'table-header-group', tableRow: 'table-row', tableRowGroup: 'table-row-group', inlineBlock: 'inline-block', inlineFlex: 'inline-flex', inlineGrid: 'inline-grid', inlineListItem: 'inline-list-item', inlineTable: 'inline-table', contents: 'contents', listItem: 'list-item'}.block;
-      $receiver_0.marginLeft = Auto$auto;
-      $receiver_0.marginRight = Auto$auto;
-      $receiver.className = css($receiver_0);
-      $receiver.src = closure$props.profile.image;
-      return Unit;
-    };
+  function Menu$lambda$lambda$lambda$lambda($receiver) {
+    $receiver.display = {block: 'block', inline: 'inline', runIn: 'run-in', flex: 'flex', flow: 'flow', flowRoot: 'flow-root', grid: 'grid', ruby: 'ruby', table: 'table', rubyBase: 'ruby-base', rubyBaseContainer: 'ruby-base-container', rubyText: 'ruby-text', rubyTextContainer: 'ruby-text-container', tableCaption: 'table-caption', tableCell: 'table-cell', tableColumn: 'table-column', tableColumnGroup: 'table-column-group', tableFooterGroup: 'table-footer-group', tableHeaderGroup: 'table-header-group', tableRow: 'table-row', tableRowGroup: 'table-row-group', inlineBlock: 'inline-block', inlineFlex: 'inline-flex', inlineGrid: 'inline-grid', inlineListItem: 'inline-list-item', inlineTable: 'inline-table', contents: 'contents', listItem: 'list-item'}.block;
+    margin_0($receiver, (2).toString() + 'vmin', Auto$auto);
+    return Unit;
   }
-  function Menu$lambda$lambda$lambda$lambda_0(closure$props) {
-    return function ($receiver) {
-      var $receiver_0 = {};
-      $receiver_0.fontSize = (3).toString() + 'vmin';
-      $receiver_0.marginTop = (2).toString() + 'vmin';
-      $receiver_0.fontWeight = {bold: 'bold', normal: 'normal', bolder: 'bolder', lighter: 'lighter'}.bold;
-      $receiver_0.whiteSpace = {breakSpaces: 'break-spaces', normal: 'normal', nowrap: 'nowrap', pre: 'pre', preLine: 'pre-line', preWrap: 'pre-wrap'}.nowrap;
-      $receiver.className = css($receiver_0);
-      $receiver.unaryPlus_pdl1vz$(closure$props.profile.name);
-      return Unit;
-    };
+  function Menu$lambda$lambda$lambda$lambda_0($receiver) {
+    $receiver.whiteSpace = {breakSpaces: 'break-spaces', normal: 'normal', nowrap: 'nowrap', pre: 'pre', preLine: 'pre-line', preWrap: 'pre-wrap'}.nowrap;
+    margin($receiver, (2).toString() + 'vmin');
+    return Unit;
   }
   function Menu$lambda$lambda$lambda(closure$props) {
     return function ($receiver) {
-      $receiver.invoke_gax9jq$(html.ReactHTML.img, Menu$lambda$lambda$lambda$lambda(closure$props));
-      $receiver.invoke_gax9jq$(html.ReactHTML.span, Menu$lambda$lambda$lambda$lambda_0(closure$props));
+      Image($receiver, closure$props.profile.image, (20).toString() + 'vmin', Auto$auto, (50).toString() + '%', void 0, void 0, Menu$lambda$lambda$lambda$lambda);
+      Text($receiver, closure$props.profile.name, (3).toString() + 'vmin', {bold: 'bold', normal: 'normal', bolder: 'bolder', lighter: 'lighter'}.bold, void 0, void 0, Menu$lambda$lambda$lambda$lambda_0);
       return Unit;
     };
   }
-  function Menu$lambda$lambda$lambda$lambda$lambda$lambda(closure$props, closure$it) {
+  function Menu$lambda$lambda$lambda$lambda$lambda(closure$props, closure$menuOption) {
     return function () {
-      closure$props.onItemClick(closure$it);
+      closure$props.onItemClick(closure$menuOption);
+      return Unit;
+    };
+  }
+  function Menu$lambda$lambda$lambda$lambda$lambda_0(closure$selected) {
+    return function ($receiver) {
+      $receiver.width = (100).toString() + '%';
+      $receiver.height = (5).toString() + 'vmin';
+      $receiver.display = {block: 'block', inline: 'inline', runIn: 'run-in', flex: 'flex', flow: 'flow', flowRoot: 'flow-root', grid: 'grid', ruby: 'ruby', table: 'table', rubyBase: 'ruby-base', rubyBaseContainer: 'ruby-base-container', rubyText: 'ruby-text', rubyTextContainer: 'ruby-text-container', tableCaption: 'table-caption', tableCell: 'table-cell', tableColumn: 'table-column', tableColumnGroup: 'table-column-group', tableFooterGroup: 'table-footer-group', tableHeaderGroup: 'table-header-group', tableRow: 'table-row', tableRowGroup: 'table-row-group', inlineBlock: 'inline-block', inlineFlex: 'inline-flex', inlineGrid: 'inline-grid', inlineListItem: 'inline-list-item', inlineTable: 'inline-table', contents: 'contents', listItem: 'list-item'}.inlineFlex;
+      $receiver.alignItems = {center: 'center', end: 'end', flexEnd: 'flex-end', flexStart: 'flex-start', selfEnd: 'self-end', selfStart: 'self-start', start: 'start', baseline: 'baseline', normal: 'normal', stretch: 'stretch'}.center;
+      $receiver.cursor = 'pointer';
+      $receiver.transition = 'color 0.2s ease-in-out 0s';
+      if (closure$selected)
+        $receiver.color = Colors_getInstance().secondary;
+      var $receiver_0 = {};
+      if (!closure$selected)
+        $receiver_0.textDecoration = {blink: 'blink', dashed: 'dashed', dotted: 'dotted', double: 'double', fromFont: 'from-font', grammarError: 'grammar-error', lineThrough: 'line-through', overline: 'overline', solid: 'solid', spellingError: 'spelling-error', underline: 'underline', wavy: 'wavy'}.underline;
+      $receiver[':hover'] = $receiver_0;
       return Unit;
     };
   }
   function Menu$lambda$lambda$lambda$lambda_1(closure$props) {
-    return function ($receiver) {
-      var $receiver_0 = {};
-      $receiver_0.display = {block: 'block', inline: 'inline', runIn: 'run-in', flex: 'flex', flow: 'flow', flowRoot: 'flow-root', grid: 'grid', ruby: 'ruby', table: 'table', rubyBase: 'ruby-base', rubyBaseContainer: 'ruby-base-container', rubyText: 'ruby-text', rubyTextContainer: 'ruby-text-container', tableCaption: 'table-caption', tableCell: 'table-cell', tableColumn: 'table-column', tableColumnGroup: 'table-column-group', tableFooterGroup: 'table-footer-group', tableHeaderGroup: 'table-header-group', tableRow: 'table-row', tableRowGroup: 'table-row-group', inlineBlock: 'inline-block', inlineFlex: 'inline-flex', inlineGrid: 'inline-grid', inlineListItem: 'inline-list-item', inlineTable: 'inline-table', contents: 'contents', listItem: 'list-item'}.flex;
-      $receiver_0.flexDirection = {column: 'column', columnReverse: 'column-reverse', row: 'row', rowReverse: 'row-reverse'}.column;
-      $receiver.className = css($receiver_0);
-      var $receiver_1 = closure$props.options;
-      var tmp$;
-      tmp$ = $receiver_1.iterator();
-      while (tmp$.hasNext()) {
-        var element = tmp$.next();
-        var closure$props_0 = closure$props;
-        MenuOptionItem($receiver, element, equals(element, closure$props_0.selectedMenuOption), Menu$lambda$lambda$lambda$lambda$lambda$lambda(closure$props_0, element));
-      }
+    return function ($receiver, menuOption) {
+      var tmp$, tmp$_0;
+      var selected = equals(menuOption, closure$props.selectedMenuOption);
+      tmp$ = menuOption.title;
+      tmp$_0 = {bold: 'bold', normal: 'normal', bolder: 'bolder', lighter: 'lighter'}.bold;
+      Text($receiver, tmp$, (2.5).toString() + 'vmin', tmp$_0, void 0, Menu$lambda$lambda$lambda$lambda$lambda(closure$props, menuOption), Menu$lambda$lambda$lambda$lambda$lambda_0(selected));
       return Unit;
     };
   }
   function Menu$lambda$lambda$lambda_0(closure$props) {
     return function ($receiver) {
       var $receiver_0 = {};
-      $receiver_0.marginTop = (2).toString() + 'vmin';
-      $receiver_0.marginBottom = (2).toString() + 'vmin';
+      margin_0($receiver_0, (2).toString() + 'vmin');
       $receiver.className = css($receiver_0);
-      $receiver.invoke_gax9jq$(html.ReactHTML.div, Menu$lambda$lambda$lambda$lambda_1(closure$props));
+      ColumnList($receiver, closure$props.options, void 0, void 0, Menu$lambda$lambda$lambda$lambda_1(closure$props));
       return Unit;
     };
   }
-  function Menu$lambda$lambda$lambda$lambda$lambda$lambda$lambda(closure$it) {
-    return function ($receiver) {
-      var $receiver_0 = {};
-      $receiver_0.filter = 'invert(' + (100).toString() + ')';
-      $receiver_0.width = (3).toString() + 'vmin';
-      $receiver_0.height = (3).toString() + 'vmin';
-      $receiver.className = css($receiver_0);
-      $receiver.src = closure$it.image;
-      return Unit;
-    };
+  function Menu$lambda$lambda$lambda$lambda_2($receiver) {
+    margin_0($receiver, (2).toString() + 'vmin');
+    return Unit;
   }
-  function Menu$lambda$lambda$lambda$lambda$lambda$lambda_0(closure$it) {
-    return function ($receiver) {
-      $receiver.href = closure$it.url;
-      $receiver.target = AnchorTarget$_blank;
-      $receiver.invoke_gax9jq$(html.ReactHTML.img, Menu$lambda$lambda$lambda$lambda$lambda$lambda$lambda(closure$it));
-      return Unit;
-    };
+  function Menu$lambda$lambda$lambda$lambda$lambda_1($receiver) {
+    $receiver.filter = 'invert(' + (100).toString() + ')';
+    return Unit;
   }
-  function Menu$lambda$lambda$lambda$lambda_2(closure$props) {
-    return function ($receiver) {
-      var $receiver_0 = {};
-      $receiver_0.display = {block: 'block', inline: 'inline', runIn: 'run-in', flex: 'flex', flow: 'flow', flowRoot: 'flow-root', grid: 'grid', ruby: 'ruby', table: 'table', rubyBase: 'ruby-base', rubyBaseContainer: 'ruby-base-container', rubyText: 'ruby-text', rubyTextContainer: 'ruby-text-container', tableCaption: 'table-caption', tableCell: 'table-cell', tableColumn: 'table-column', tableColumnGroup: 'table-column-group', tableFooterGroup: 'table-footer-group', tableHeaderGroup: 'table-header-group', tableRow: 'table-row', tableRowGroup: 'table-row-group', inlineBlock: 'inline-block', inlineFlex: 'inline-flex', inlineGrid: 'inline-grid', inlineListItem: 'inline-list-item', inlineTable: 'inline-table', contents: 'contents', listItem: 'list-item'}.flex;
-      $receiver_0.justifyContent = {spaceAround: 'space-around', spaceBetween: 'space-between', spaceEvenly: 'space-evenly', stretch: 'stretch', center: 'center', end: 'end', flexEnd: 'flex-end', flexStart: 'flex-start', start: 'start', left: 'left', normal: 'normal', right: 'right'}.spaceEvenly;
-      $receiver.className = css($receiver_0);
-      var tmp$;
-      tmp$ = closure$props.profile.socials.iterator();
-      while (tmp$.hasNext()) {
-        var element = tmp$.next();
-        $receiver.invoke_gax9jq$(html.ReactHTML.a, Menu$lambda$lambda$lambda$lambda$lambda$lambda_0(element));
-      }
-      return Unit;
-    };
-  }
-  function Menu$lambda$lambda$lambda$lambda_3($receiver) {
-    $receiver.unaryPlus_pdl1vz$('\xA9 2022 lincollincol');
+  function Menu$lambda$lambda$lambda$lambda_3($receiver, it) {
+    LinkImage($receiver, it.image, it.url, (3).toString() + 'vmin', (3).toString() + 'vmin', void 0, void 0, void 0, void 0, Menu$lambda$lambda$lambda$lambda$lambda_1);
     return Unit;
   }
   function Menu$lambda$lambda$lambda_1(closure$props) {
     return function ($receiver) {
       var $receiver_0 = {};
-      $receiver_0.marginTop = Auto$auto;
+      margin($receiver_0, Auto$auto, (2).toString() + 'vmin');
       $receiver_0.textAlign = {center: 'center', end: 'end', justify: 'justify', left: 'left', matchParent: 'match-parent', right: 'right', start: 'start'}.center;
-      $receiver_0.fontSize = (2).toString() + 'vmin';
       $receiver.className = css($receiver_0);
-      $receiver.invoke_gax9jq$(html.ReactHTML.div, Menu$lambda$lambda$lambda$lambda_2(closure$props));
-      $receiver.invoke_gax9jq$(html.ReactHTML.p, Menu$lambda$lambda$lambda$lambda_3);
+      RowList($receiver, closure$props.profile.socials, {spaceAround: 'space-around', spaceBetween: 'space-between', spaceEvenly: 'space-evenly', stretch: 'stretch', center: 'center', end: 'end', flexEnd: 'flex-end', flexStart: 'flex-start', start: 'start', left: 'left', normal: 'normal', right: 'right'}.spaceEvenly, Menu$lambda$lambda$lambda$lambda_2, Menu$lambda$lambda$lambda$lambda_3);
+      Text($receiver, '\xA9 2022 lincollincol', (2).toString() + 'vmin');
       return Unit;
     };
   }
@@ -35963,87 +35937,27 @@ var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_
     return Unit;
   }
   var Menu;
-  function MenuOptionItem$lambda$lambda(closure$onClick) {
-    return function (it) {
-      closure$onClick();
-      return Unit;
-    };
-  }
-  function MenuOptionItem$lambda(closure$selected, closure$onClick, closure$option) {
-    return function ($receiver) {
-      var $receiver_0 = {};
-      var closure$selected_0 = closure$selected;
-      $receiver_0.width = (100).toString() + '%';
-      $receiver_0.height = (5).toString() + 'vmin';
-      $receiver_0.fontSize = (2.5).toString() + 'vmin';
-      $receiver_0.fontWeight = {bold: 'bold', normal: 'normal', bolder: 'bolder', lighter: 'lighter'}.bold;
-      $receiver_0.display = {block: 'block', inline: 'inline', runIn: 'run-in', flex: 'flex', flow: 'flow', flowRoot: 'flow-root', grid: 'grid', ruby: 'ruby', table: 'table', rubyBase: 'ruby-base', rubyBaseContainer: 'ruby-base-container', rubyText: 'ruby-text', rubyTextContainer: 'ruby-text-container', tableCaption: 'table-caption', tableCell: 'table-cell', tableColumn: 'table-column', tableColumnGroup: 'table-column-group', tableFooterGroup: 'table-footer-group', tableHeaderGroup: 'table-header-group', tableRow: 'table-row', tableRowGroup: 'table-row-group', inlineBlock: 'inline-block', inlineFlex: 'inline-flex', inlineGrid: 'inline-grid', inlineListItem: 'inline-list-item', inlineTable: 'inline-table', contents: 'contents', listItem: 'list-item'}.inlineFlex;
-      $receiver_0.alignItems = {center: 'center', end: 'end', flexEnd: 'flex-end', flexStart: 'flex-start', selfEnd: 'self-end', selfStart: 'self-start', start: 'start', baseline: 'baseline', normal: 'normal', stretch: 'stretch'}.center;
-      $receiver_0.cursor = 'pointer';
-      $receiver_0.transition = 'color 0.2s ease-in-out 0s';
-      if (closure$selected_0)
-        $receiver_0.color = Colors_getInstance().secondary;
-      var $receiver_1 = {};
-      if (!closure$selected_0)
-        $receiver_1.textDecoration = {blink: 'blink', dashed: 'dashed', dotted: 'dotted', double: 'double', fromFont: 'from-font', grammarError: 'grammar-error', lineThrough: 'line-through', overline: 'overline', solid: 'solid', spellingError: 'spelling-error', underline: 'underline', wavy: 'wavy'}.underline;
-      $receiver_0[':hover'] = $receiver_1;
-      $receiver.className = css($receiver_0);
-      $receiver.onClick = MenuOptionItem$lambda$lambda(closure$onClick);
-      $receiver.unaryPlus_pdl1vz$(closure$option.title);
-      return Unit;
-    };
-  }
-  function MenuOptionItem($receiver, option, selected, onClick) {
-    $receiver.invoke_gax9jq$(html.ReactHTML.span, MenuOptionItem$lambda(selected, onClick, option));
-  }
-  function ProfileAbout$lambda$lambda($receiver) {
-    var $receiver_0 = {};
-    $receiver_0.fontSize = (6).toString() + 'vmin';
-    $receiver_0.fontWeight = {bold: 'bold', normal: 'normal', bolder: 'bolder', lighter: 'lighter'}.bold;
-    $receiver.className = css($receiver_0);
-    $receiver.unaryPlus_pdl1vz$('About Me');
-    return Unit;
-  }
-  function ProfileAbout$lambda$lambda_0(closure$about) {
-    return function ($receiver) {
-      var $receiver_0 = {};
-      $receiver_0.fontSize = (3).toString() + 'vmin';
-      $receiver.className = css($receiver_0);
-      $receiver.unaryPlus_pdl1vz$(closure$about);
-      return Unit;
-    };
-  }
   function ProfileAbout$lambda(closure$about) {
     return function ($receiver) {
       var $receiver_0 = {};
-      $receiver_0.width = (70).toString() + '%';
       $receiver_0.display = {block: 'block', inline: 'inline', runIn: 'run-in', flex: 'flex', flow: 'flow', flowRoot: 'flow-root', grid: 'grid', ruby: 'ruby', table: 'table', rubyBase: 'ruby-base', rubyBaseContainer: 'ruby-base-container', rubyText: 'ruby-text', rubyTextContainer: 'ruby-text-container', tableCaption: 'table-caption', tableCell: 'table-cell', tableColumn: 'table-column', tableColumnGroup: 'table-column-group', tableFooterGroup: 'table-footer-group', tableHeaderGroup: 'table-header-group', tableRow: 'table-row', tableRowGroup: 'table-row-group', inlineBlock: 'inline-block', inlineFlex: 'inline-flex', inlineGrid: 'inline-grid', inlineListItem: 'inline-list-item', inlineTable: 'inline-table', contents: 'contents', listItem: 'list-item'}.flex;
       $receiver_0.flexDirection = {column: 'column', columnReverse: 'column-reverse', row: 'row', rowReverse: 'row-reverse'}.column;
       $receiver.className = css($receiver_0);
-      $receiver.invoke_gax9jq$(html.ReactHTML.p, ProfileAbout$lambda$lambda);
-      $receiver.invoke_gax9jq$(html.ReactHTML.span, ProfileAbout$lambda$lambda_0(closure$about));
+      TitleText($receiver, 'About Me');
+      Text($receiver, closure$about);
       return Unit;
     };
   }
   function ProfileAbout($receiver, about) {
     $receiver.invoke_gax9jq$(html.ReactHTML.div, ProfileAbout$lambda(about));
   }
-  function ProfileWorkExperience$lambda$lambda($receiver) {
-    var $receiver_0 = {};
-    $receiver_0.fontSize = (6).toString() + 'vmin';
-    $receiver_0.fontWeight = {bold: 'bold', normal: 'normal', bolder: 'bolder', lighter: 'lighter'}.bold;
-    $receiver.className = css($receiver_0);
-    $receiver.unaryPlus_pdl1vz$('Jobs history');
-    return Unit;
-  }
   function ProfileWorkExperience$lambda(closure$workExperience) {
     return function ($receiver) {
       var $receiver_0 = {};
-      $receiver_0.width = (70).toString() + '%';
       $receiver_0.display = {block: 'block', inline: 'inline', runIn: 'run-in', flex: 'flex', flow: 'flow', flowRoot: 'flow-root', grid: 'grid', ruby: 'ruby', table: 'table', rubyBase: 'ruby-base', rubyBaseContainer: 'ruby-base-container', rubyText: 'ruby-text', rubyTextContainer: 'ruby-text-container', tableCaption: 'table-caption', tableCell: 'table-cell', tableColumn: 'table-column', tableColumnGroup: 'table-column-group', tableFooterGroup: 'table-footer-group', tableHeaderGroup: 'table-header-group', tableRow: 'table-row', tableRowGroup: 'table-row-group', inlineBlock: 'inline-block', inlineFlex: 'inline-flex', inlineGrid: 'inline-grid', inlineListItem: 'inline-list-item', inlineTable: 'inline-table', contents: 'contents', listItem: 'list-item'}.flex;
       $receiver_0.flexDirection = {column: 'column', columnReverse: 'column-reverse', row: 'row', rowReverse: 'row-reverse'}.column;
       $receiver.className = css($receiver_0);
-      $receiver.invoke_gax9jq$(html.ReactHTML.p, ProfileWorkExperience$lambda$lambda);
+      TitleText($receiver, 'Jobs history');
       var tmp$;
       tmp$ = closure$workExperience.iterator();
       while (tmp$.hasNext()) {
@@ -36056,181 +35970,168 @@ var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_
   function ProfileWorkExperience($receiver, workExperience) {
     $receiver.invoke_gax9jq$(html.ReactHTML.div, ProfileWorkExperience$lambda(workExperience));
   }
-  function WorkExperienceItem$lambda$lambda(closure$experience) {
+  function WorkExperienceItem$lambda$lambda$lambda(closure$workExperience) {
     return function ($receiver) {
       var $receiver_0 = {};
-      $receiver_0.width = (10).toString() + 'vmin';
-      $receiver_0.height = (10).toString() + 'vmin';
-      $receiver_0.borderRadius = (30).toString() + '%';
-      $receiver_0.objectFit = {contain: 'contain', cover: 'cover', fill: 'fill', scaleDown: 'scale-down'}.contain;
-      $receiver_0.backgroundColor = Colors_getInstance().white;
+      margin_0($receiver_0, void 0, (2).toString() + 'vmin');
+      $receiver_0.display = {block: 'block', inline: 'inline', runIn: 'run-in', flex: 'flex', flow: 'flow', flowRoot: 'flow-root', grid: 'grid', ruby: 'ruby', table: 'table', rubyBase: 'ruby-base', rubyBaseContainer: 'ruby-base-container', rubyText: 'ruby-text', rubyTextContainer: 'ruby-text-container', tableCaption: 'table-caption', tableCell: 'table-cell', tableColumn: 'table-column', tableColumnGroup: 'table-column-group', tableFooterGroup: 'table-footer-group', tableHeaderGroup: 'table-header-group', tableRow: 'table-row', tableRowGroup: 'table-row-group', inlineBlock: 'inline-block', inlineFlex: 'inline-flex', inlineGrid: 'inline-grid', inlineListItem: 'inline-list-item', inlineTable: 'inline-table', contents: 'contents', listItem: 'list-item'}.flex;
+      $receiver_0.flexDirection = {column: 'column', columnReverse: 'column-reverse', row: 'row', rowReverse: 'row-reverse'}.column;
       $receiver.className = css($receiver_0);
-      $receiver.src = closure$experience.image;
+      LinkText($receiver, closure$workExperience.company, '', void 0, {bold: 'bold', normal: 'normal', bolder: 'bolder', lighter: 'lighter'}.bold);
+      Text($receiver, closure$workExperience.dates, (2.5).toString() + 'vmin');
+      Text($receiver, closure$workExperience.role, (2.5).toString() + 'vmin');
       return Unit;
     };
   }
-  function WorkExperienceItem$lambda$lambda$lambda(closure$experience) {
+  function WorkExperienceItem$lambda$lambda(closure$workExperience) {
     return function ($receiver) {
       var $receiver_0 = {};
-      $receiver_0.fontSize = (3).toString() + 'vmin';
+      margin_0($receiver_0, (2).toString() + 'vmin');
+      $receiver_0.display = {block: 'block', inline: 'inline', runIn: 'run-in', flex: 'flex', flow: 'flow', flowRoot: 'flow-root', grid: 'grid', ruby: 'ruby', table: 'table', rubyBase: 'ruby-base', rubyBaseContainer: 'ruby-base-container', rubyText: 'ruby-text', rubyTextContainer: 'ruby-text-container', tableCaption: 'table-caption', tableCell: 'table-cell', tableColumn: 'table-column', tableColumnGroup: 'table-column-group', tableFooterGroup: 'table-footer-group', tableHeaderGroup: 'table-header-group', tableRow: 'table-row', tableRowGroup: 'table-row-group', inlineBlock: 'inline-block', inlineFlex: 'inline-flex', inlineGrid: 'inline-grid', inlineListItem: 'inline-list-item', inlineTable: 'inline-table', contents: 'contents', listItem: 'list-item'}.flex;
+      $receiver_0.alignItems = {center: 'center', end: 'end', flexEnd: 'flex-end', flexStart: 'flex-start', selfEnd: 'self-end', selfStart: 'self-start', start: 'start', baseline: 'baseline', normal: 'normal', stretch: 'stretch'}.center;
       $receiver.className = css($receiver_0);
-      $receiver.unaryPlus_pdl1vz$(closure$experience.company);
+      Image($receiver, closure$workExperience.image, (12).toString() + 'vmin', (12).toString() + 'vmin', (25).toString() + '%');
+      $receiver.invoke_gax9jq$(html.ReactHTML.div, WorkExperienceItem$lambda$lambda$lambda(closure$workExperience));
       return Unit;
     };
   }
-  function WorkExperienceItem$lambda$lambda$lambda_0(closure$experience) {
-    return function ($receiver) {
-      var $receiver_0 = {};
-      $receiver_0.fontSize = (2).toString() + 'vmin';
-      $receiver.className = css($receiver_0);
-      $receiver.unaryPlus_pdl1vz$(closure$experience.dates);
-      return Unit;
-    };
+  function WorkExperienceItem$lambda$lambda_0($receiver) {
+    margin($receiver, void 0, void 0, (14).toString() + 'vmin');
+    return Unit;
   }
-  function WorkExperienceItem$lambda$lambda$lambda_1(closure$experience) {
-    return function ($receiver) {
-      var $receiver_0 = {};
-      $receiver_0.fontSize = (2).toString() + 'vmin';
-      $receiver.className = css($receiver_0);
-      $receiver.unaryPlus_pdl1vz$(closure$experience.role);
-      return Unit;
-    };
+  function WorkExperienceItem$lambda$lambda_1($receiver, it) {
+    ListText($receiver, it.name, (2.5).toString() + 'vmin');
+    return Unit;
   }
-  function WorkExperienceItem$lambda$lambda_0(closure$experience) {
+  function WorkExperienceItem$lambda(closure$workExperience) {
     return function ($receiver) {
       var $receiver_0 = {};
       $receiver_0.display = {block: 'block', inline: 'inline', runIn: 'run-in', flex: 'flex', flow: 'flow', flowRoot: 'flow-root', grid: 'grid', ruby: 'ruby', table: 'table', rubyBase: 'ruby-base', rubyBaseContainer: 'ruby-base-container', rubyText: 'ruby-text', rubyTextContainer: 'ruby-text-container', tableCaption: 'table-caption', tableCell: 'table-cell', tableColumn: 'table-column', tableColumnGroup: 'table-column-group', tableFooterGroup: 'table-footer-group', tableHeaderGroup: 'table-header-group', tableRow: 'table-row', tableRowGroup: 'table-row-group', inlineBlock: 'inline-block', inlineFlex: 'inline-flex', inlineGrid: 'inline-grid', inlineListItem: 'inline-list-item', inlineTable: 'inline-table', contents: 'contents', listItem: 'list-item'}.flex;
       $receiver_0.flexDirection = {column: 'column', columnReverse: 'column-reverse', row: 'row', rowReverse: 'row-reverse'}.column;
-      $receiver_0.marginLeft = (2).toString() + 'vmin';
-      $receiver_0.marginRight = (2).toString() + 'vmin';
       $receiver.className = css($receiver_0);
-      $receiver.invoke_gax9jq$(html.ReactHTML.strong, WorkExperienceItem$lambda$lambda$lambda(closure$experience));
-      $receiver.invoke_gax9jq$(html.ReactHTML.span, WorkExperienceItem$lambda$lambda$lambda_0(closure$experience));
-      $receiver.invoke_gax9jq$(html.ReactHTML.span, WorkExperienceItem$lambda$lambda$lambda_1(closure$experience));
+      $receiver.invoke_gax9jq$(html.ReactHTML.div, WorkExperienceItem$lambda$lambda(closure$workExperience));
+      ColumnList($receiver, closure$workExperience.responsibilities, void 0, WorkExperienceItem$lambda$lambda_0, WorkExperienceItem$lambda$lambda_1);
       return Unit;
     };
   }
-  function WorkExperienceItem$lambda(closure$experience) {
-    return function ($receiver) {
-      var $receiver_0 = {};
-      $receiver_0.marginTop = (2).toString() + 'vmin';
-      $receiver_0.marginBottom = (2).toString() + 'vmin';
-      $receiver_0.display = {block: 'block', inline: 'inline', runIn: 'run-in', flex: 'flex', flow: 'flow', flowRoot: 'flow-root', grid: 'grid', ruby: 'ruby', table: 'table', rubyBase: 'ruby-base', rubyBaseContainer: 'ruby-base-container', rubyText: 'ruby-text', rubyTextContainer: 'ruby-text-container', tableCaption: 'table-caption', tableCell: 'table-cell', tableColumn: 'table-column', tableColumnGroup: 'table-column-group', tableFooterGroup: 'table-footer-group', tableHeaderGroup: 'table-header-group', tableRow: 'table-row', tableRowGroup: 'table-row-group', inlineBlock: 'inline-block', inlineFlex: 'inline-flex', inlineGrid: 'inline-grid', inlineListItem: 'inline-list-item', inlineTable: 'inline-table', contents: 'contents', listItem: 'list-item'}.flex;
-      $receiver_0.whiteSpace = {breakSpaces: 'break-spaces', normal: 'normal', nowrap: 'nowrap', pre: 'pre', preLine: 'pre-line', preWrap: 'pre-wrap'}.nowrap;
-      $receiver_0.alignItems = {center: 'center', end: 'end', flexEnd: 'flex-end', flexStart: 'flex-start', selfEnd: 'self-end', selfStart: 'self-start', start: 'start', baseline: 'baseline', normal: 'normal', stretch: 'stretch'}.center;
-      $receiver.className = css($receiver_0);
-      $receiver.invoke_gax9jq$(html.ReactHTML.img, WorkExperienceItem$lambda$lambda(closure$experience));
-      $receiver.invoke_gax9jq$(html.ReactHTML.div, WorkExperienceItem$lambda$lambda_0(closure$experience));
-      return Unit;
-    };
+  function WorkExperienceItem($receiver, workExperience) {
+    $receiver.invoke_gax9jq$(html.ReactHTML.div, WorkExperienceItem$lambda(workExperience));
   }
-  function WorkExperienceItem($receiver, experience) {
-    $receiver.invoke_gax9jq$(html.ReactHTML.div, WorkExperienceItem$lambda(experience));
-  }
-  function ProfileProjects$lambda$lambda($receiver) {
-    var $receiver_0 = {};
-    $receiver_0.fontSize = (6).toString() + 'vmin';
-    $receiver_0.fontWeight = {bold: 'bold', normal: 'normal', bolder: 'bolder', lighter: 'lighter'}.bold;
-    $receiver.className = css($receiver_0);
-    $receiver.unaryPlus_pdl1vz$('Projects');
+  function ProfileProjects$lambda$lambda($receiver, project) {
+    ProjectItem($receiver, project);
     return Unit;
   }
   function ProfileProjects$lambda(closure$projects) {
     return function ($receiver) {
       var $receiver_0 = {};
-      $receiver_0.width = (70).toString() + '%';
       $receiver_0.display = {block: 'block', inline: 'inline', runIn: 'run-in', flex: 'flex', flow: 'flow', flowRoot: 'flow-root', grid: 'grid', ruby: 'ruby', table: 'table', rubyBase: 'ruby-base', rubyBaseContainer: 'ruby-base-container', rubyText: 'ruby-text', rubyTextContainer: 'ruby-text-container', tableCaption: 'table-caption', tableCell: 'table-cell', tableColumn: 'table-column', tableColumnGroup: 'table-column-group', tableFooterGroup: 'table-footer-group', tableHeaderGroup: 'table-header-group', tableRow: 'table-row', tableRowGroup: 'table-row-group', inlineBlock: 'inline-block', inlineFlex: 'inline-flex', inlineGrid: 'inline-grid', inlineListItem: 'inline-list-item', inlineTable: 'inline-table', contents: 'contents', listItem: 'list-item'}.flex;
       $receiver_0.flexDirection = {column: 'column', columnReverse: 'column-reverse', row: 'row', rowReverse: 'row-reverse'}.column;
       $receiver.className = css($receiver_0);
-      $receiver.invoke_gax9jq$(html.ReactHTML.p, ProfileProjects$lambda$lambda);
-      var tmp$;
-      tmp$ = closure$projects.iterator();
-      while (tmp$.hasNext()) {
-        var element = tmp$.next();
-        ProjectItem($receiver, element);
-      }
+      TitleText($receiver, 'Projects');
+      ColumnList($receiver, closure$projects, void 0, void 0, ProfileProjects$lambda$lambda);
       return Unit;
     };
   }
   function ProfileProjects($receiver, projects) {
     $receiver.invoke_gax9jq$(html.ReactHTML.div, ProfileProjects$lambda(projects));
   }
-  function ProjectItem$lambda$lambda(closure$project) {
-    return function ($receiver) {
-      $receiver.href = closure$project.url;
-      $receiver.target = AnchorTarget$_blank;
-      $receiver.unaryPlus_pdl1vz$(closure$project.name);
-      return Unit;
-    };
+  function ProjectItem$lambda($receiver) {
+    margin_0($receiver, (2).toString() + 'vmin');
+    $receiver.alignItems = {center: 'center', end: 'end', flexEnd: 'flex-end', flexStart: 'flex-start', selfEnd: 'self-end', selfStart: 'self-start', start: 'start', baseline: 'baseline', normal: 'normal', stretch: 'stretch'}.center;
+    return Unit;
+  }
+  function ProjectItem$lambda$lambda($receiver) {
+    $receiver.display = {block: 'block', inline: 'inline', runIn: 'run-in', flex: 'flex', flow: 'flow', flowRoot: 'flow-root', grid: 'grid', ruby: 'ruby', table: 'table', rubyBase: 'ruby-base', rubyBaseContainer: 'ruby-base-container', rubyText: 'ruby-text', rubyTextContainer: 'ruby-text-container', tableCaption: 'table-caption', tableCell: 'table-cell', tableColumn: 'table-column', tableColumnGroup: 'table-column-group', tableFooterGroup: 'table-footer-group', tableHeaderGroup: 'table-header-group', tableRow: 'table-row', tableRowGroup: 'table-row-group', inlineBlock: 'inline-block', inlineFlex: 'inline-flex', inlineGrid: 'inline-grid', inlineListItem: 'inline-list-item', inlineTable: 'inline-table', contents: 'contents', listItem: 'list-item'}.flex;
+    $receiver.justifyContent = {spaceAround: 'space-around', spaceBetween: 'space-between', spaceEvenly: 'space-evenly', stretch: 'stretch', center: 'center', end: 'end', flexEnd: 'flex-end', flexStart: 'flex-start', start: 'start', left: 'left', normal: 'normal', right: 'right'}.center;
+    $receiver.alignItems = {center: 'center', end: 'end', flexEnd: 'flex-end', flexStart: 'flex-start', selfEnd: 'self-end', selfStart: 'self-start', start: 'start', baseline: 'baseline', normal: 'normal', stretch: 'stretch'}.center;
+    return Unit;
   }
   function ProjectItem$lambda$lambda_0(closure$project) {
     return function ($receiver) {
-      $receiver.unaryPlus_pdl1vz$(closure$project.description);
+      var $receiver_0 = closure$project.name;
+      var destination = StringBuilder_init();
+      var tmp$;
+      tmp$ = $receiver_0.length;
+      for (var index = 0; index < tmp$; index++) {
+        var element = $receiver_0.charCodeAt(index);
+        if (isUpperCase(unboxChar(toBoxedChar(element))))
+          destination.append_s8itvh$(element);
+      }
+      Text($receiver, destination.toString(), void 0, {bold: 'bold', normal: 'normal', bolder: 'bolder', lighter: 'lighter'}.bold, Colors_getInstance().secondary);
       return Unit;
     };
   }
-  function ProjectItem$lambda(closure$project) {
+  function ProjectItem$lambda$lambda_1($receiver) {
+    margin_0($receiver, void 0, (2).toString() + 'vmin');
+    return Unit;
+  }
+  function ProjectItem$lambda$lambda_2(closure$project) {
     return function ($receiver) {
-      var $receiver_0 = {};
-      $receiver_0.fontSize = (3).toString() + 'vmin';
-      $receiver_0.display = {block: 'block', inline: 'inline', runIn: 'run-in', flex: 'flex', flow: 'flow', flowRoot: 'flow-root', grid: 'grid', ruby: 'ruby', table: 'table', rubyBase: 'ruby-base', rubyBaseContainer: 'ruby-base-container', rubyText: 'ruby-text', rubyTextContainer: 'ruby-text-container', tableCaption: 'table-caption', tableCell: 'table-cell', tableColumn: 'table-column', tableColumnGroup: 'table-column-group', tableFooterGroup: 'table-footer-group', tableHeaderGroup: 'table-header-group', tableRow: 'table-row', tableRowGroup: 'table-row-group', inlineBlock: 'inline-block', inlineFlex: 'inline-flex', inlineGrid: 'inline-grid', inlineListItem: 'inline-list-item', inlineTable: 'inline-table', contents: 'contents', listItem: 'list-item'}.flex;
-      $receiver_0.flexDirection = {column: 'column', columnReverse: 'column-reverse', row: 'row', rowReverse: 'row-reverse'}.column;
-      $receiver.className = css($receiver_0);
-      $receiver.invoke_gax9jq$(html.ReactHTML.a, ProjectItem$lambda$lambda(closure$project));
-      $receiver.invoke_gax9jq$(html.ReactHTML.span, ProjectItem$lambda$lambda_0(closure$project));
+      LinkText($receiver, closure$project.name, closure$project.url, void 0, {bold: 'bold', normal: 'normal', bolder: 'bolder', lighter: 'lighter'}.bold);
+      Text($receiver, closure$project.description, (2.5).toString() + 'vmin');
+      return Unit;
+    };
+  }
+  function ProjectItem$lambda_0(closure$project) {
+    return function ($receiver) {
+      var tmp$, tmp$_0, tmp$_1;
+      if (closure$project.image.length === 0) {
+        tmp$ = (12).toString() + 'vmin';
+        tmp$_0 = (12).toString() + 'vmin';
+        tmp$_1 = (30).toString() + '%';
+        Box($receiver, tmp$, tmp$_0, Colors_getInstance().primary, void 0, tmp$_1, ProjectItem$lambda$lambda, ProjectItem$lambda$lambda_0(closure$project));
+      } else {
+        Image($receiver, closure$project.image, (12).toString() + 'vmin', (12).toString() + 'vmin', (30).toString() + '%');
+      }
+      Column($receiver, ProjectItem$lambda$lambda_1, ProjectItem$lambda$lambda_2(closure$project));
       return Unit;
     };
   }
   function ProjectItem($receiver, project) {
-    $receiver.invoke_gax9jq$(html.ReactHTML.div, ProjectItem$lambda(project));
+    Row($receiver, ProjectItem$lambda, ProjectItem$lambda_0(project));
   }
-  function ProfileSkills$lambda$lambda($receiver) {
-    var $receiver_0 = {};
-    $receiver_0.fontSize = (6).toString() + 'vmin';
-    $receiver_0.fontWeight = {bold: 'bold', normal: 'normal', bolder: 'bolder', lighter: 'lighter'}.bold;
-    $receiver.className = css($receiver_0);
-    $receiver.unaryPlus_pdl1vz$('Skills');
+  function ProfileSkills$lambda$lambda$lambda($receiver, skill) {
+    ListText($receiver, skill.name, (2.5).toString() + 'vmin');
     return Unit;
   }
   function ProfileSkills$lambda(closure$skills) {
     return function ($receiver) {
       var $receiver_0 = {};
-      $receiver_0.width = (70).toString() + '%';
       $receiver_0.display = {block: 'block', inline: 'inline', runIn: 'run-in', flex: 'flex', flow: 'flow', flowRoot: 'flow-root', grid: 'grid', ruby: 'ruby', table: 'table', rubyBase: 'ruby-base', rubyBaseContainer: 'ruby-base-container', rubyText: 'ruby-text', rubyTextContainer: 'ruby-text-container', tableCaption: 'table-caption', tableCell: 'table-cell', tableColumn: 'table-column', tableColumnGroup: 'table-column-group', tableFooterGroup: 'table-footer-group', tableHeaderGroup: 'table-header-group', tableRow: 'table-row', tableRowGroup: 'table-row-group', inlineBlock: 'inline-block', inlineFlex: 'inline-flex', inlineGrid: 'inline-grid', inlineListItem: 'inline-list-item', inlineTable: 'inline-table', contents: 'contents', listItem: 'list-item'}.flex;
       $receiver_0.flexDirection = {column: 'column', columnReverse: 'column-reverse', row: 'row', rowReverse: 'row-reverse'}.column;
       $receiver.className = css($receiver_0);
-      $receiver.invoke_gax9jq$(html.ReactHTML.p, ProfileSkills$lambda$lambda);
+      TitleText($receiver, 'Skills');
+      var $receiver_1 = closure$skills;
+      var destination = LinkedHashMap_init();
       var tmp$;
-      tmp$ = closure$skills.iterator();
+      tmp$ = $receiver_1.iterator();
       while (tmp$.hasNext()) {
         var element = tmp$.next();
-        SkillItem($receiver, element);
+        var key = element.group;
+        var tmp$_0;
+        var value = destination.get_11rb$(key);
+        if (value == null) {
+          var answer = ArrayList_init();
+          destination.put_xwzc9p$(key, answer);
+          tmp$_0 = answer;
+        } else {
+          tmp$_0 = value;
+        }
+        var list = tmp$_0;
+        list.add_11rb$(element);
+      }
+      var tmp$_1;
+      tmp$_1 = destination.entries.iterator();
+      while (tmp$_1.hasNext()) {
+        var element_0 = tmp$_1.next();
+        TitleText($receiver, element_0.key, (3).toString() + 'vmin');
+        ColumnList($receiver, element_0.value, void 0, void 0, ProfileSkills$lambda$lambda$lambda);
       }
       return Unit;
     };
   }
   function ProfileSkills($receiver, skills) {
     $receiver.invoke_gax9jq$(html.ReactHTML.div, ProfileSkills$lambda(skills));
-  }
-  function SkillItem$lambda$lambda(closure$skill) {
-    return function ($receiver) {
-      $receiver.unaryPlus_pdl1vz$(closure$skill.name);
-      return Unit;
-    };
-  }
-  function SkillItem$lambda(closure$skill) {
-    return function ($receiver) {
-      var $receiver_0 = {};
-      $receiver_0.fontSize = (3).toString() + 'vmin';
-      $receiver_0.display = {block: 'block', inline: 'inline', runIn: 'run-in', flex: 'flex', flow: 'flow', flowRoot: 'flow-root', grid: 'grid', ruby: 'ruby', table: 'table', rubyBase: 'ruby-base', rubyBaseContainer: 'ruby-base-container', rubyText: 'ruby-text', rubyTextContainer: 'ruby-text-container', tableCaption: 'table-caption', tableCell: 'table-cell', tableColumn: 'table-column', tableColumnGroup: 'table-column-group', tableFooterGroup: 'table-footer-group', tableHeaderGroup: 'table-header-group', tableRow: 'table-row', tableRowGroup: 'table-row-group', inlineBlock: 'inline-block', inlineFlex: 'inline-flex', inlineGrid: 'inline-grid', inlineListItem: 'inline-list-item', inlineTable: 'inline-table', contents: 'contents', listItem: 'list-item'}.flex;
-      $receiver_0.flexDirection = {column: 'column', columnReverse: 'column-reverse', row: 'row', rowReverse: 'row-reverse'}.column;
-      $receiver.className = css($receiver_0);
-      $receiver.invoke_gax9jq$(html.ReactHTML.li, SkillItem$lambda$lambda(closure$skill));
-      return Unit;
-    };
-  }
-  function SkillItem($receiver, skill) {
-    $receiver.invoke_gax9jq$(html.ReactHTML.div, SkillItem$lambda(skill));
   }
   function MenuOption(title) {
     MenuOption$Companion_getInstance();
@@ -36283,18 +36184,6 @@ var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_
       new MenuOption$Projects();
     }
     return MenuOption$Projects_instance;
-  }
-  function MenuOption$Contact() {
-    MenuOption$Contact_instance = this;
-    MenuOption.call(this, 'Contact');
-  }
-  MenuOption$Contact.$metadata$ = {kind: Kind_OBJECT, simpleName: 'Contact', interfaces: [MenuOption]};
-  var MenuOption$Contact_instance = null;
-  function MenuOption$Contact_getInstance() {
-    if (MenuOption$Contact_instance === null) {
-      new MenuOption$Contact();
-    }
-    return MenuOption$Contact_instance;
   }
   function MenuOption$Companion() {
     MenuOption$Companion_instance = this;
@@ -36490,9 +36379,10 @@ var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_
   Profile.prototype.equals = function (other) {
     return this === other || (other !== null && (typeof other === 'object' && (Object.getPrototypeOf(this) === Object.getPrototypeOf(other) && (Kotlin.equals(this.name, other.name) && Kotlin.equals(this.about, other.about) && Kotlin.equals(this.image, other.image) && Kotlin.equals(this.workExperience, other.workExperience) && Kotlin.equals(this.skills, other.skills) && Kotlin.equals(this.projects, other.projects) && Kotlin.equals(this.socials, other.socials)))));
   };
-  function Project(name, description, url) {
+  function Project(name, image, description, url) {
     Project$Companion_getInstance();
     this.name = name;
+    this.image = image;
     this.description = description;
     this.url = url;
   }
@@ -36511,8 +36401,9 @@ var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_
     return Project$Companion_instance;
   }
   function Project$$serializer() {
-    this.descriptor_682d2x$_0 = new PluginGeneratedSerialDescriptor('model.Project', this, 3);
+    this.descriptor_682d2x$_0 = new PluginGeneratedSerialDescriptor('model.Project', this, 4);
     this.descriptor.addElement_ivxn3r$('name', false);
+    this.descriptor.addElement_ivxn3r$('image', false);
     this.descriptor.addElement_ivxn3r$('description', false);
     this.descriptor.addElement_ivxn3r$('url', false);
     Project$$serializer_instance = this;
@@ -36523,14 +36414,15 @@ var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_
   Project$$serializer.prototype.serialize_55azsf$ = function (encoder, value) {
     var output = encoder.beginStructure_24f42q$(this.descriptor);
     output.encodeStringElement_iij8qq$(this.descriptor, 0, value.name);
-    output.encodeStringElement_iij8qq$(this.descriptor, 1, value.description);
-    output.encodeStringElement_iij8qq$(this.descriptor, 2, value.url);
+    output.encodeStringElement_iij8qq$(this.descriptor, 1, value.image);
+    output.encodeStringElement_iij8qq$(this.descriptor, 2, value.description);
+    output.encodeStringElement_iij8qq$(this.descriptor, 3, value.url);
     output.endStructure_24f42q$(this.descriptor);
   };
   Project$$serializer.prototype.deserialize_bq71mq$ = function (decoder) {
     var index;
     var bitMask0 = 0;
-    var local0, local1, local2;
+    var local0, local1, local2, local3;
     var input = decoder.beginStructure_24f42q$(this.descriptor);
     loopLabel: while (true) {
       index = input.decodeElementIndex_24f42q$(this.descriptor);
@@ -36547,6 +36439,10 @@ var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_
           local2 = input.decodeStringElement_szpzho$(this.descriptor, 2);
           bitMask0 |= 4;
           break;
+        case 3:
+          local3 = input.decodeStringElement_szpzho$(this.descriptor, 3);
+          bitMask0 |= 8;
+          break;
         case -1:
           break loopLabel;
         default:
@@ -36554,10 +36450,10 @@ var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_
       }
     }
     input.endStructure_24f42q$(this.descriptor);
-    return Project_init(bitMask0, local0, local1, local2, null);
+    return Project_init(bitMask0, local0, local1, local2, local3, null);
   };
   Project$$serializer.prototype.childSerializers = function () {
-    return [internal.StringSerializer, internal.StringSerializer, internal.StringSerializer];
+    return [internal.StringSerializer, internal.StringSerializer, internal.StringSerializer, internal.StringSerializer];
   };
   Project$$serializer.$metadata$ = {kind: Kind_OBJECT, simpleName: '$serializer', interfaces: [GeneratedSerializer]};
   var Project$$serializer_instance = null;
@@ -36567,17 +36463,21 @@ var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_
     }
     return Project$$serializer_instance;
   }
-  function Project_init(seen1, name, description, url, serializationConstructorMarker) {
+  function Project_init(seen1, name, image, description, url, serializationConstructorMarker) {
     var $this = serializationConstructorMarker || Object.create(Project.prototype);
     if ((seen1 & 1) === 0)
       throw MissingFieldException_init('name');
     else
       $this.name = name;
     if ((seen1 & 2) === 0)
+      throw MissingFieldException_init('image');
+    else
+      $this.image = image;
+    if ((seen1 & 4) === 0)
       throw MissingFieldException_init('description');
     else
       $this.description = description;
-    if ((seen1 & 4) === 0)
+    if ((seen1 & 8) === 0)
       throw MissingFieldException_init('url');
     else
       $this.url = url;
@@ -36588,59 +36488,63 @@ var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_
     return this.name;
   };
   Project.prototype.component2 = function () {
-    return this.description;
+    return this.image;
   };
   Project.prototype.component3 = function () {
+    return this.description;
+  };
+  Project.prototype.component4 = function () {
     return this.url;
   };
-  Project.prototype.copy_6hosri$ = function (name, description, url) {
-    return new Project(name === void 0 ? this.name : name, description === void 0 ? this.description : description, url === void 0 ? this.url : url);
+  Project.prototype.copy_w74nik$ = function (name, image, description, url) {
+    return new Project(name === void 0 ? this.name : name, image === void 0 ? this.image : image, description === void 0 ? this.description : description, url === void 0 ? this.url : url);
   };
   Project.prototype.toString = function () {
-    return 'Project(name=' + Kotlin.toString(this.name) + (', description=' + Kotlin.toString(this.description)) + (', url=' + Kotlin.toString(this.url)) + ')';
+    return 'Project(name=' + Kotlin.toString(this.name) + (', image=' + Kotlin.toString(this.image)) + (', description=' + Kotlin.toString(this.description)) + (', url=' + Kotlin.toString(this.url)) + ')';
   };
   Project.prototype.hashCode = function () {
     var result = 0;
     result = result * 31 + Kotlin.hashCode(this.name) | 0;
+    result = result * 31 + Kotlin.hashCode(this.image) | 0;
     result = result * 31 + Kotlin.hashCode(this.description) | 0;
     result = result * 31 + Kotlin.hashCode(this.url) | 0;
     return result;
   };
   Project.prototype.equals = function (other) {
-    return this === other || (other !== null && (typeof other === 'object' && (Object.getPrototypeOf(this) === Object.getPrototypeOf(other) && (Kotlin.equals(this.name, other.name) && Kotlin.equals(this.description, other.description) && Kotlin.equals(this.url, other.url)))));
+    return this === other || (other !== null && (typeof other === 'object' && (Object.getPrototypeOf(this) === Object.getPrototypeOf(other) && (Kotlin.equals(this.name, other.name) && Kotlin.equals(this.image, other.image) && Kotlin.equals(this.description, other.description) && Kotlin.equals(this.url, other.url)))));
   };
-  function Skill(name) {
-    Skill$Companion_getInstance();
+  function Responsibility(name) {
+    Responsibility$Companion_getInstance();
     this.name = name;
   }
-  function Skill$Companion() {
-    Skill$Companion_instance = this;
+  function Responsibility$Companion() {
+    Responsibility$Companion_instance = this;
   }
-  Skill$Companion.prototype.serializer = function () {
-    return Skill$$serializer_getInstance();
+  Responsibility$Companion.prototype.serializer = function () {
+    return Responsibility$$serializer_getInstance();
   };
-  Skill$Companion.$metadata$ = {kind: Kind_OBJECT, simpleName: 'Companion', interfaces: []};
-  var Skill$Companion_instance = null;
-  function Skill$Companion_getInstance() {
-    if (Skill$Companion_instance === null) {
-      new Skill$Companion();
+  Responsibility$Companion.$metadata$ = {kind: Kind_OBJECT, simpleName: 'Companion', interfaces: []};
+  var Responsibility$Companion_instance = null;
+  function Responsibility$Companion_getInstance() {
+    if (Responsibility$Companion_instance === null) {
+      new Responsibility$Companion();
     }
-    return Skill$Companion_instance;
+    return Responsibility$Companion_instance;
   }
-  function Skill$$serializer() {
-    this.descriptor_b6coh$_0 = new PluginGeneratedSerialDescriptor('model.Skill', this, 1);
+  function Responsibility$$serializer() {
+    this.descriptor_yi9z3c$_0 = new PluginGeneratedSerialDescriptor('model.Responsibility', this, 1);
     this.descriptor.addElement_ivxn3r$('name', false);
-    Skill$$serializer_instance = this;
+    Responsibility$$serializer_instance = this;
   }
-  Object.defineProperty(Skill$$serializer.prototype, 'descriptor', {configurable: true, get: function () {
-    return this.descriptor_b6coh$_0;
+  Object.defineProperty(Responsibility$$serializer.prototype, 'descriptor', {configurable: true, get: function () {
+    return this.descriptor_yi9z3c$_0;
   }});
-  Skill$$serializer.prototype.serialize_55azsf$ = function (encoder, value) {
+  Responsibility$$serializer.prototype.serialize_55azsf$ = function (encoder, value) {
     var output = encoder.beginStructure_24f42q$(this.descriptor);
     output.encodeStringElement_iij8qq$(this.descriptor, 0, value.name);
     output.endStructure_24f42q$(this.descriptor);
   };
-  Skill$$serializer.prototype.deserialize_bq71mq$ = function (decoder) {
+  Responsibility$$serializer.prototype.deserialize_bq71mq$ = function (decoder) {
     var index;
     var bitMask0 = 0;
     var local0;
@@ -36659,10 +36563,106 @@ var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_
       }
     }
     input.endStructure_24f42q$(this.descriptor);
-    return Skill_init(bitMask0, local0, null);
+    return Responsibility_init(bitMask0, local0, null);
+  };
+  Responsibility$$serializer.prototype.childSerializers = function () {
+    return [internal.StringSerializer];
+  };
+  Responsibility$$serializer.$metadata$ = {kind: Kind_OBJECT, simpleName: '$serializer', interfaces: [GeneratedSerializer]};
+  var Responsibility$$serializer_instance = null;
+  function Responsibility$$serializer_getInstance() {
+    if (Responsibility$$serializer_instance === null) {
+      new Responsibility$$serializer();
+    }
+    return Responsibility$$serializer_instance;
+  }
+  function Responsibility_init(seen1, name, serializationConstructorMarker) {
+    var $this = serializationConstructorMarker || Object.create(Responsibility.prototype);
+    if ((seen1 & 1) === 0)
+      throw MissingFieldException_init('name');
+    else
+      $this.name = name;
+    return $this;
+  }
+  Responsibility.$metadata$ = {kind: Kind_CLASS, simpleName: 'Responsibility', interfaces: []};
+  Responsibility.prototype.component1 = function () {
+    return this.name;
+  };
+  Responsibility.prototype.copy_61zpoe$ = function (name) {
+    return new Responsibility(name === void 0 ? this.name : name);
+  };
+  Responsibility.prototype.toString = function () {
+    return 'Responsibility(name=' + Kotlin.toString(this.name) + ')';
+  };
+  Responsibility.prototype.hashCode = function () {
+    var result = 0;
+    result = result * 31 + Kotlin.hashCode(this.name) | 0;
+    return result;
+  };
+  Responsibility.prototype.equals = function (other) {
+    return this === other || (other !== null && (typeof other === 'object' && (Object.getPrototypeOf(this) === Object.getPrototypeOf(other) && Kotlin.equals(this.name, other.name))));
+  };
+  function Skill(name, group) {
+    Skill$Companion_getInstance();
+    this.name = name;
+    this.group = group;
+  }
+  function Skill$Companion() {
+    Skill$Companion_instance = this;
+  }
+  Skill$Companion.prototype.serializer = function () {
+    return Skill$$serializer_getInstance();
+  };
+  Skill$Companion.$metadata$ = {kind: Kind_OBJECT, simpleName: 'Companion', interfaces: []};
+  var Skill$Companion_instance = null;
+  function Skill$Companion_getInstance() {
+    if (Skill$Companion_instance === null) {
+      new Skill$Companion();
+    }
+    return Skill$Companion_instance;
+  }
+  function Skill$$serializer() {
+    this.descriptor_b6coh$_0 = new PluginGeneratedSerialDescriptor('model.Skill', this, 2);
+    this.descriptor.addElement_ivxn3r$('name', false);
+    this.descriptor.addElement_ivxn3r$('group', false);
+    Skill$$serializer_instance = this;
+  }
+  Object.defineProperty(Skill$$serializer.prototype, 'descriptor', {configurable: true, get: function () {
+    return this.descriptor_b6coh$_0;
+  }});
+  Skill$$serializer.prototype.serialize_55azsf$ = function (encoder, value) {
+    var output = encoder.beginStructure_24f42q$(this.descriptor);
+    output.encodeStringElement_iij8qq$(this.descriptor, 0, value.name);
+    output.encodeStringElement_iij8qq$(this.descriptor, 1, value.group);
+    output.endStructure_24f42q$(this.descriptor);
+  };
+  Skill$$serializer.prototype.deserialize_bq71mq$ = function (decoder) {
+    var index;
+    var bitMask0 = 0;
+    var local0, local1;
+    var input = decoder.beginStructure_24f42q$(this.descriptor);
+    loopLabel: while (true) {
+      index = input.decodeElementIndex_24f42q$(this.descriptor);
+      switch (index) {
+        case 0:
+          local0 = input.decodeStringElement_szpzho$(this.descriptor, 0);
+          bitMask0 |= 1;
+          break;
+        case 1:
+          local1 = input.decodeStringElement_szpzho$(this.descriptor, 1);
+          bitMask0 |= 2;
+          break;
+        case -1:
+          break loopLabel;
+        default:
+          throw new UnknownFieldException(index);
+      }
+    }
+    input.endStructure_24f42q$(this.descriptor);
+    return Skill_init(bitMask0, local0, local1, null);
   };
   Skill$$serializer.prototype.childSerializers = function () {
-    return [internal.StringSerializer];
+    return [internal.StringSerializer, internal.StringSerializer];
   };
   Skill$$serializer.$metadata$ = {kind: Kind_OBJECT, simpleName: '$serializer', interfaces: [GeneratedSerializer]};
   var Skill$$serializer_instance = null;
@@ -36672,31 +36672,39 @@ var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_
     }
     return Skill$$serializer_instance;
   }
-  function Skill_init(seen1, name, serializationConstructorMarker) {
+  function Skill_init(seen1, name, group, serializationConstructorMarker) {
     var $this = serializationConstructorMarker || Object.create(Skill.prototype);
     if ((seen1 & 1) === 0)
       throw MissingFieldException_init('name');
     else
       $this.name = name;
+    if ((seen1 & 2) === 0)
+      throw MissingFieldException_init('group');
+    else
+      $this.group = group;
     return $this;
   }
   Skill.$metadata$ = {kind: Kind_CLASS, simpleName: 'Skill', interfaces: []};
   Skill.prototype.component1 = function () {
     return this.name;
   };
-  Skill.prototype.copy_61zpoe$ = function (name) {
-    return new Skill(name === void 0 ? this.name : name);
+  Skill.prototype.component2 = function () {
+    return this.group;
+  };
+  Skill.prototype.copy_puj7f4$ = function (name, group) {
+    return new Skill(name === void 0 ? this.name : name, group === void 0 ? this.group : group);
   };
   Skill.prototype.toString = function () {
-    return 'Skill(name=' + Kotlin.toString(this.name) + ')';
+    return 'Skill(name=' + Kotlin.toString(this.name) + (', group=' + Kotlin.toString(this.group)) + ')';
   };
   Skill.prototype.hashCode = function () {
     var result = 0;
     result = result * 31 + Kotlin.hashCode(this.name) | 0;
+    result = result * 31 + Kotlin.hashCode(this.group) | 0;
     return result;
   };
   Skill.prototype.equals = function (other) {
-    return this === other || (other !== null && (typeof other === 'object' && (Object.getPrototypeOf(this) === Object.getPrototypeOf(other) && Kotlin.equals(this.name, other.name))));
+    return this === other || (other !== null && (typeof other === 'object' && (Object.getPrototypeOf(this) === Object.getPrototypeOf(other) && (Kotlin.equals(this.name, other.name) && Kotlin.equals(this.group, other.group)))));
   };
   function Social(name, image, url) {
     Social$Companion_getInstance();
@@ -36817,12 +36825,13 @@ var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_
   Social.prototype.equals = function (other) {
     return this === other || (other !== null && (typeof other === 'object' && (Object.getPrototypeOf(this) === Object.getPrototypeOf(other) && (Kotlin.equals(this.name, other.name) && Kotlin.equals(this.image, other.image) && Kotlin.equals(this.url, other.url)))));
   };
-  function WorkExperience(company, image, role, dates) {
+  function WorkExperience(company, image, role, dates, responsibilities) {
     WorkExperience$Companion_getInstance();
     this.company = company;
     this.image = image;
     this.role = role;
     this.dates = dates;
+    this.responsibilities = responsibilities;
   }
   function WorkExperience$Companion() {
     WorkExperience$Companion_instance = this;
@@ -36839,11 +36848,12 @@ var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_
     return WorkExperience$Companion_instance;
   }
   function WorkExperience$$serializer() {
-    this.descriptor_ddkp7f$_0 = new PluginGeneratedSerialDescriptor('model.WorkExperience', this, 4);
+    this.descriptor_ddkp7f$_0 = new PluginGeneratedSerialDescriptor('model.WorkExperience', this, 5);
     this.descriptor.addElement_ivxn3r$('company', false);
     this.descriptor.addElement_ivxn3r$('image', false);
     this.descriptor.addElement_ivxn3r$('role', false);
     this.descriptor.addElement_ivxn3r$('dates', false);
+    this.descriptor.addElement_ivxn3r$('responsibilities', false);
     WorkExperience$$serializer_instance = this;
   }
   Object.defineProperty(WorkExperience$$serializer.prototype, 'descriptor', {configurable: true, get: function () {
@@ -36855,12 +36865,13 @@ var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_
     output.encodeStringElement_iij8qq$(this.descriptor, 1, value.image);
     output.encodeStringElement_iij8qq$(this.descriptor, 2, value.role);
     output.encodeStringElement_iij8qq$(this.descriptor, 3, value.dates);
+    output.encodeSerializableElement_r4qlx7$(this.descriptor, 4, new ArrayListSerializer(Responsibility$$serializer_getInstance()), value.responsibilities);
     output.endStructure_24f42q$(this.descriptor);
   };
   WorkExperience$$serializer.prototype.deserialize_bq71mq$ = function (decoder) {
     var index;
     var bitMask0 = 0;
-    var local0, local1, local2, local3;
+    var local0, local1, local2, local3, local4;
     var input = decoder.beginStructure_24f42q$(this.descriptor);
     loopLabel: while (true) {
       index = input.decodeElementIndex_24f42q$(this.descriptor);
@@ -36881,6 +36892,10 @@ var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_
           local3 = input.decodeStringElement_szpzho$(this.descriptor, 3);
           bitMask0 |= 8;
           break;
+        case 4:
+          local4 = input.decodeSerializableElement_12e8id$(this.descriptor, 4, new ArrayListSerializer(Responsibility$$serializer_getInstance()), local4);
+          bitMask0 |= 16;
+          break;
         case -1:
           break loopLabel;
         default:
@@ -36888,10 +36903,10 @@ var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_
       }
     }
     input.endStructure_24f42q$(this.descriptor);
-    return WorkExperience_init(bitMask0, local0, local1, local2, local3, null);
+    return WorkExperience_init(bitMask0, local0, local1, local2, local3, local4, null);
   };
   WorkExperience$$serializer.prototype.childSerializers = function () {
-    return [internal.StringSerializer, internal.StringSerializer, internal.StringSerializer, internal.StringSerializer];
+    return [internal.StringSerializer, internal.StringSerializer, internal.StringSerializer, internal.StringSerializer, new ArrayListSerializer(Responsibility$$serializer_getInstance())];
   };
   WorkExperience$$serializer.$metadata$ = {kind: Kind_OBJECT, simpleName: '$serializer', interfaces: [GeneratedSerializer]};
   var WorkExperience$$serializer_instance = null;
@@ -36901,7 +36916,7 @@ var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_
     }
     return WorkExperience$$serializer_instance;
   }
-  function WorkExperience_init(seen1, company, image, role, dates, serializationConstructorMarker) {
+  function WorkExperience_init(seen1, company, image, role, dates, responsibilities, serializationConstructorMarker) {
     var $this = serializationConstructorMarker || Object.create(WorkExperience.prototype);
     if ((seen1 & 1) === 0)
       throw MissingFieldException_init('company');
@@ -36919,6 +36934,10 @@ var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_
       throw MissingFieldException_init('dates');
     else
       $this.dates = dates;
+    if ((seen1 & 16) === 0)
+      throw MissingFieldException_init('responsibilities');
+    else
+      $this.responsibilities = responsibilities;
     return $this;
   }
   WorkExperience.$metadata$ = {kind: Kind_CLASS, simpleName: 'WorkExperience', interfaces: []};
@@ -36934,11 +36953,14 @@ var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_
   WorkExperience.prototype.component4 = function () {
     return this.dates;
   };
-  WorkExperience.prototype.copy_w74nik$ = function (company, image, role, dates) {
-    return new WorkExperience(company === void 0 ? this.company : company, image === void 0 ? this.image : image, role === void 0 ? this.role : role, dates === void 0 ? this.dates : dates);
+  WorkExperience.prototype.component5 = function () {
+    return this.responsibilities;
+  };
+  WorkExperience.prototype.copy_6jad8w$ = function (company, image, role, dates, responsibilities) {
+    return new WorkExperience(company === void 0 ? this.company : company, image === void 0 ? this.image : image, role === void 0 ? this.role : role, dates === void 0 ? this.dates : dates, responsibilities === void 0 ? this.responsibilities : responsibilities);
   };
   WorkExperience.prototype.toString = function () {
-    return 'WorkExperience(company=' + Kotlin.toString(this.company) + (', image=' + Kotlin.toString(this.image)) + (', role=' + Kotlin.toString(this.role)) + (', dates=' + Kotlin.toString(this.dates)) + ')';
+    return 'WorkExperience(company=' + Kotlin.toString(this.company) + (', image=' + Kotlin.toString(this.image)) + (', role=' + Kotlin.toString(this.role)) + (', dates=' + Kotlin.toString(this.dates)) + (', responsibilities=' + Kotlin.toString(this.responsibilities)) + ')';
   };
   WorkExperience.prototype.hashCode = function () {
     var result = 0;
@@ -36946,15 +36968,16 @@ var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_
     result = result * 31 + Kotlin.hashCode(this.image) | 0;
     result = result * 31 + Kotlin.hashCode(this.role) | 0;
     result = result * 31 + Kotlin.hashCode(this.dates) | 0;
+    result = result * 31 + Kotlin.hashCode(this.responsibilities) | 0;
     return result;
   };
   WorkExperience.prototype.equals = function (other) {
-    return this === other || (other !== null && (typeof other === 'object' && (Object.getPrototypeOf(this) === Object.getPrototypeOf(other) && (Kotlin.equals(this.company, other.company) && Kotlin.equals(this.image, other.image) && Kotlin.equals(this.role, other.role) && Kotlin.equals(this.dates, other.dates)))));
+    return this === other || (other !== null && (typeof other === 'object' && (Object.getPrototypeOf(this) === Object.getPrototypeOf(other) && (Kotlin.equals(this.company, other.company) && Kotlin.equals(this.image, other.image) && Kotlin.equals(this.role, other.role) && Kotlin.equals(this.dates, other.dates) && Kotlin.equals(this.responsibilities, other.responsibilities)))));
   };
   function Colors() {
     Colors_instance = this;
     this.primary = '#FFFFFF';
-    this.secondary = '#9402ff';
+    this.secondary = '#6A5ACD';
     this.surface = '#000000';
     this.palegreen = '#98FB98';
     this.plum = '#DDA0DD';
@@ -36976,6 +36999,7 @@ var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_
     this.fuchsia = '#FF00FF';
     this.slateblue = '#6A5ACD';
     this.black = '#000000';
+    this.black50 = '#80000000';
     this.white = '#FFFFFF';
     this.white90 = '#E6FFFFFF';
     this.white80 = '#CCFFFFFF';
@@ -37015,6 +37039,232 @@ var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_
     request.onreadystatechange = readFile$lambda(request, result);
     request.send(null);
   }
+  function padding($receiver, top, bottom, left, right) {
+    if (top === void 0) {
+      top = (0).toString() + 'px';
+    }
+    if (bottom === void 0) {
+      bottom = (0).toString() + 'px';
+    }
+    if (left === void 0) {
+      left = (0).toString() + 'px';
+    }
+    if (right === void 0) {
+      right = (0).toString() + 'px';
+    }
+    $receiver.paddingTop = top;
+    $receiver.paddingBottom = bottom;
+    $receiver.paddingLeft = left;
+    $receiver.paddingRight = right;
+  }
+  function padding_0($receiver, vertical, horizontal) {
+    if (vertical === void 0) {
+      vertical = (0).toString() + 'px';
+    }
+    if (horizontal === void 0) {
+      horizontal = (0).toString() + 'px';
+    }
+    padding($receiver, vertical, vertical, horizontal, horizontal);
+  }
+  function margin($receiver, top, bottom, left, right) {
+    if (top === void 0) {
+      top = (0).toString() + 'px';
+    }
+    if (bottom === void 0) {
+      bottom = (0).toString() + 'px';
+    }
+    if (left === void 0) {
+      left = (0).toString() + 'px';
+    }
+    if (right === void 0) {
+      right = (0).toString() + 'px';
+    }
+    $receiver.marginTop = top;
+    $receiver.marginBottom = bottom;
+    $receiver.marginLeft = left;
+    $receiver.marginRight = right;
+  }
+  function margin_0($receiver, vertical, horizontal) {
+    if (vertical === void 0) {
+      vertical = (0).toString() + 'px';
+    }
+    if (horizontal === void 0) {
+      horizontal = (0).toString() + 'px';
+    }
+    margin($receiver, vertical, vertical, horizontal, horizontal);
+  }
+  function Image$lambda$lambda(closure$onClick) {
+    return function (it) {
+      closure$onClick != null ? closure$onClick() : null;
+      return Unit;
+    };
+  }
+  function Image$lambda(closure$width, closure$height, closure$radius, closure$fit, closure$backgroundColor, closure$extraStyleProperties, closure$src, closure$onClick) {
+    return function ($receiver) {
+      var $receiver_0 = {};
+      var closure$width_0 = closure$width;
+      var closure$height_0 = closure$height;
+      var closure$radius_0 = closure$radius;
+      var closure$fit_0 = closure$fit;
+      var closure$backgroundColor_0 = closure$backgroundColor;
+      var closure$extraStyleProperties_0 = closure$extraStyleProperties;
+      $receiver_0.width = closure$width_0;
+      $receiver_0.height = closure$height_0;
+      $receiver_0.borderRadius = closure$radius_0;
+      $receiver_0.objectFit = closure$fit_0;
+      $receiver_0.backgroundColor = closure$backgroundColor_0;
+      closure$extraStyleProperties_0 != null ? closure$extraStyleProperties_0($receiver_0) : null;
+      $receiver.className = css($receiver_0);
+      $receiver.src = closure$src;
+      $receiver.onClick = Image$lambda$lambda(closure$onClick);
+      return Unit;
+    };
+  }
+  function Image($receiver, src, width, height, radius, fit, backgroundColor, extraStyleProperties, onClick) {
+    if (radius === void 0) {
+      radius = (30).toString() + '%';
+    }
+    if (fit === void 0)
+      fit = {contain: 'contain', cover: 'cover', fill: 'fill', scaleDown: 'scale-down'}.contain;
+    if (backgroundColor === void 0)
+      backgroundColor = Colors_getInstance().primary;
+    if (extraStyleProperties === void 0)
+      extraStyleProperties = null;
+    if (onClick === void 0)
+      onClick = null;
+    $receiver.invoke_gax9jq$(html.ReactHTML.img, Image$lambda(width, height, radius, fit, backgroundColor, extraStyleProperties, src, onClick));
+  }
+  function LinkImage$lambda(closure$url, closure$target, closure$src, closure$width, closure$height, closure$radius, closure$fit, closure$backgroundColor, closure$extraStyleProperties) {
+    return function ($receiver) {
+      $receiver.href = closure$url;
+      $receiver.target = closure$target;
+      Image($receiver, closure$src, closure$width, closure$height, closure$radius, closure$fit, closure$backgroundColor, closure$extraStyleProperties);
+      return Unit;
+    };
+  }
+  function LinkImage($receiver, src, url, width, height, radius, fit, backgroundColor, target, extraStyleProperties) {
+    if (radius === void 0) {
+      radius = (30).toString() + '%';
+    }
+    if (fit === void 0)
+      fit = {contain: 'contain', cover: 'cover', fill: 'fill', scaleDown: 'scale-down'}.contain;
+    if (backgroundColor === void 0)
+      backgroundColor = Colors_getInstance().primary;
+    if (target === void 0)
+      target = AnchorTarget$_blank;
+    if (extraStyleProperties === void 0)
+      extraStyleProperties = null;
+    $receiver.invoke_gax9jq$(html.ReactHTML.a, LinkImage$lambda(url, target, src, width, height, radius, fit, backgroundColor, extraStyleProperties));
+  }
+  function Box$lambda(closure$width, closure$height, closure$backgroundColor, closure$border, closure$borderRadius, closure$extraStyleProperties, closure$boxBuilder) {
+    return function ($receiver) {
+      var $receiver_0 = {};
+      var closure$width_0 = closure$width;
+      var closure$height_0 = closure$height;
+      var closure$backgroundColor_0 = closure$backgroundColor;
+      var closure$border_0 = closure$border;
+      var closure$borderRadius_0 = closure$borderRadius;
+      var closure$extraStyleProperties_0 = closure$extraStyleProperties;
+      $receiver_0.width = closure$width_0;
+      $receiver_0.height = closure$height_0;
+      $receiver_0.backgroundColor = closure$backgroundColor_0;
+      $receiver_0.border = closure$border_0;
+      $receiver_0.borderRadius = closure$borderRadius_0;
+      closure$extraStyleProperties_0 != null ? closure$extraStyleProperties_0($receiver_0) : null;
+      $receiver.className = css($receiver_0);
+      closure$boxBuilder($receiver);
+      return Unit;
+    };
+  }
+  function Box($receiver, width, height, backgroundColor, border, borderRadius, extraStyleProperties, boxBuilder) {
+    if (backgroundColor === void 0)
+      backgroundColor = null;
+    if (border === void 0)
+      border = null;
+    if (borderRadius === void 0)
+      borderRadius = null;
+    if (extraStyleProperties === void 0)
+      extraStyleProperties = null;
+    $receiver.invoke_gax9jq$(html.ReactHTML.div, Box$lambda(width, height, backgroundColor, border, borderRadius, extraStyleProperties, boxBuilder));
+  }
+  function Column$lambda(closure$extraStyleProperties, closure$columnBuilder) {
+    return function ($receiver) {
+      var $receiver_0 = {};
+      var closure$extraStyleProperties_0 = closure$extraStyleProperties;
+      $receiver_0.display = {block: 'block', inline: 'inline', runIn: 'run-in', flex: 'flex', flow: 'flow', flowRoot: 'flow-root', grid: 'grid', ruby: 'ruby', table: 'table', rubyBase: 'ruby-base', rubyBaseContainer: 'ruby-base-container', rubyText: 'ruby-text', rubyTextContainer: 'ruby-text-container', tableCaption: 'table-caption', tableCell: 'table-cell', tableColumn: 'table-column', tableColumnGroup: 'table-column-group', tableFooterGroup: 'table-footer-group', tableHeaderGroup: 'table-header-group', tableRow: 'table-row', tableRowGroup: 'table-row-group', inlineBlock: 'inline-block', inlineFlex: 'inline-flex', inlineGrid: 'inline-grid', inlineListItem: 'inline-list-item', inlineTable: 'inline-table', contents: 'contents', listItem: 'list-item'}.flex;
+      $receiver_0.flexDirection = {column: 'column', columnReverse: 'column-reverse', row: 'row', rowReverse: 'row-reverse'}.column;
+      closure$extraStyleProperties_0 != null ? closure$extraStyleProperties_0($receiver_0) : null;
+      $receiver.className = css($receiver_0);
+      closure$columnBuilder($receiver);
+      return Unit;
+    };
+  }
+  function Column($receiver, extraStyleProperties, columnBuilder) {
+    if (extraStyleProperties === void 0)
+      extraStyleProperties = null;
+    $receiver.invoke_gax9jq$(html.ReactHTML.div, Column$lambda(extraStyleProperties, columnBuilder));
+  }
+  function Row$lambda(closure$extraStyleProperties, closure$columnBuilder) {
+    return function ($receiver) {
+      var $receiver_0 = {};
+      var closure$extraStyleProperties_0 = closure$extraStyleProperties;
+      $receiver_0.display = {block: 'block', inline: 'inline', runIn: 'run-in', flex: 'flex', flow: 'flow', flowRoot: 'flow-root', grid: 'grid', ruby: 'ruby', table: 'table', rubyBase: 'ruby-base', rubyBaseContainer: 'ruby-base-container', rubyText: 'ruby-text', rubyTextContainer: 'ruby-text-container', tableCaption: 'table-caption', tableCell: 'table-cell', tableColumn: 'table-column', tableColumnGroup: 'table-column-group', tableFooterGroup: 'table-footer-group', tableHeaderGroup: 'table-header-group', tableRow: 'table-row', tableRowGroup: 'table-row-group', inlineBlock: 'inline-block', inlineFlex: 'inline-flex', inlineGrid: 'inline-grid', inlineListItem: 'inline-list-item', inlineTable: 'inline-table', contents: 'contents', listItem: 'list-item'}.flex;
+      $receiver_0.flexDirection = {column: 'column', columnReverse: 'column-reverse', row: 'row', rowReverse: 'row-reverse'}.row;
+      closure$extraStyleProperties_0 != null ? closure$extraStyleProperties_0($receiver_0) : null;
+      $receiver.className = css($receiver_0);
+      closure$columnBuilder($receiver);
+      return Unit;
+    };
+  }
+  function Row($receiver, extraStyleProperties, columnBuilder) {
+    if (extraStyleProperties === void 0)
+      extraStyleProperties = null;
+    $receiver.invoke_gax9jq$(html.ReactHTML.div, Row$lambda(extraStyleProperties, columnBuilder));
+  }
+  function ColumnList$lambda($receiver) {
+    return Unit;
+  }
+  function ColumnList($receiver, items, justifyContent, extraStyleProperties, itemBuilder) {
+    if (justifyContent === void 0)
+      justifyContent = {spaceAround: 'space-around', spaceBetween: 'space-between', spaceEvenly: 'space-evenly', stretch: 'stretch', center: 'center', end: 'end', flexEnd: 'flex-end', flexStart: 'flex-start', start: 'start', left: 'left', normal: 'normal', right: 'right'}.normal;
+    if (extraStyleProperties === void 0)
+      extraStyleProperties = null;
+    List($receiver, items, justifyContent, {column: 'column', columnReverse: 'column-reverse', row: 'row', rowReverse: 'row-reverse'}.column, extraStyleProperties != null ? extraStyleProperties : ColumnList$lambda, itemBuilder);
+  }
+  function RowList$lambda($receiver) {
+    return Unit;
+  }
+  function RowList($receiver, items, justifyContent, extraStyleProperties, itemBuilder) {
+    if (justifyContent === void 0)
+      justifyContent = {spaceAround: 'space-around', spaceBetween: 'space-between', spaceEvenly: 'space-evenly', stretch: 'stretch', center: 'center', end: 'end', flexEnd: 'flex-end', flexStart: 'flex-start', start: 'start', left: 'left', normal: 'normal', right: 'right'}.normal;
+    if (extraStyleProperties === void 0)
+      extraStyleProperties = null;
+    List($receiver, items, justifyContent, {column: 'column', columnReverse: 'column-reverse', row: 'row', rowReverse: 'row-reverse'}.row, extraStyleProperties != null ? extraStyleProperties : RowList$lambda, itemBuilder);
+  }
+  function List$lambda(closure$flexDirection, closure$justifyContent, closure$extraStyleProperties, closure$items, closure$itemBuilder) {
+    return function ($receiver) {
+      var $receiver_0 = {};
+      var closure$flexDirection_0 = closure$flexDirection;
+      var closure$justifyContent_0 = closure$justifyContent;
+      var closure$extraStyleProperties_0 = closure$extraStyleProperties;
+      $receiver_0.display = {block: 'block', inline: 'inline', runIn: 'run-in', flex: 'flex', flow: 'flow', flowRoot: 'flow-root', grid: 'grid', ruby: 'ruby', table: 'table', rubyBase: 'ruby-base', rubyBaseContainer: 'ruby-base-container', rubyText: 'ruby-text', rubyTextContainer: 'ruby-text-container', tableCaption: 'table-caption', tableCell: 'table-cell', tableColumn: 'table-column', tableColumnGroup: 'table-column-group', tableFooterGroup: 'table-footer-group', tableHeaderGroup: 'table-header-group', tableRow: 'table-row', tableRowGroup: 'table-row-group', inlineBlock: 'inline-block', inlineFlex: 'inline-flex', inlineGrid: 'inline-grid', inlineListItem: 'inline-list-item', inlineTable: 'inline-table', contents: 'contents', listItem: 'list-item'}.flex;
+      $receiver_0.flexDirection = closure$flexDirection_0;
+      $receiver_0.justifyContent = closure$justifyContent_0;
+      closure$extraStyleProperties_0($receiver_0);
+      $receiver.className = css($receiver_0);
+      var $receiver_1 = closure$items;
+      var tmp$;
+      tmp$ = $receiver_1.iterator();
+      while (tmp$.hasNext()) {
+        var element = tmp$.next();
+        closure$itemBuilder($receiver, element);
+      }
+      return Unit;
+    };
+  }
+  function List($receiver, items, justifyContent, flexDirection, extraStyleProperties, itemBuilder) {
+    $receiver.invoke_gax9jq$(html.ReactHTML.div, List$lambda(flexDirection, justifyContent, extraStyleProperties, items, itemBuilder));
+  }
   function VerticalDivider$lambda(closure$width, closure$opacity, closure$color) {
     return function ($receiver) {
       var $receiver_0 = {};
@@ -37040,6 +37290,102 @@ var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_
     }
     $receiver.invoke_gax9jq$(html.ReactHTML.div, VerticalDivider$lambda(width, opacity, color));
   }
+  function TitleText$lambda(closure$text, closure$fontSize, closure$onClick, closure$extraStyleProperties) {
+    return function ($receiver) {
+      Text($receiver, closure$text, closure$fontSize, {bold: 'bold', normal: 'normal', bolder: 'bolder', lighter: 'lighter'}.bold, void 0, closure$onClick, closure$extraStyleProperties);
+      return Unit;
+    };
+  }
+  function TitleText($receiver, text, fontSize, onClick, extraStyleProperties) {
+    if (fontSize === void 0) {
+      fontSize = (6).toString() + 'vmin';
+    }
+    if (onClick === void 0)
+      onClick = null;
+    if (extraStyleProperties === void 0)
+      extraStyleProperties = null;
+    $receiver.invoke_gax9jq$(html.ReactHTML.p, TitleText$lambda(text, fontSize, onClick, extraStyleProperties));
+  }
+  function LinkText$lambda(closure$url, closure$text, closure$fontSize, closure$fontWeight, closure$onClick, closure$extraStyleProperties) {
+    return function ($receiver) {
+      var $receiver_0 = {};
+      if (closure$url.length === 0)
+        $receiver_0.pointerEvents = None$none;
+      $receiver.className = css($receiver_0);
+      $receiver.href = closure$url;
+      Text($receiver, closure$text, closure$fontSize, closure$fontWeight, Colors_getInstance().secondary, closure$onClick, closure$extraStyleProperties);
+      return Unit;
+    };
+  }
+  function LinkText($receiver, text, url, fontSize, fontWeight, onClick, extraStyleProperties) {
+    if (fontSize === void 0) {
+      fontSize = (3).toString() + 'vmin';
+    }
+    if (fontWeight === void 0)
+      fontWeight = {bold: 'bold', normal: 'normal', bolder: 'bolder', lighter: 'lighter'}.normal;
+    if (onClick === void 0)
+      onClick = null;
+    if (extraStyleProperties === void 0)
+      extraStyleProperties = null;
+    $receiver.invoke_gax9jq$(html.ReactHTML.a, LinkText$lambda(url, text, fontSize, fontWeight, onClick, extraStyleProperties));
+  }
+  function ListText$lambda(closure$text, closure$fontSize, closure$fontWeight, closure$color, closure$onClick, closure$extraStyleProperties) {
+    return function ($receiver) {
+      Text($receiver, closure$text, closure$fontSize, closure$fontWeight, closure$color, closure$onClick, closure$extraStyleProperties);
+      return Unit;
+    };
+  }
+  function ListText($receiver, text, fontSize, fontWeight, color, onClick, extraStyleProperties) {
+    if (fontSize === void 0) {
+      fontSize = (3).toString() + 'vmin';
+    }
+    if (fontWeight === void 0)
+      fontWeight = {bold: 'bold', normal: 'normal', bolder: 'bolder', lighter: 'lighter'}.normal;
+    if (color === void 0)
+      color = Colors_getInstance().primary;
+    if (onClick === void 0)
+      onClick = null;
+    if (extraStyleProperties === void 0)
+      extraStyleProperties = null;
+    $receiver.invoke_gax9jq$(html.ReactHTML.li, ListText$lambda(text, fontSize, fontWeight, color, onClick, extraStyleProperties));
+  }
+  function Text$lambda$lambda(closure$onClick) {
+    return function (it) {
+      closure$onClick != null ? closure$onClick() : null;
+      return Unit;
+    };
+  }
+  function Text$lambda(closure$fontSize, closure$fontWeight, closure$color, closure$extraStyleProperties, closure$onClick, closure$text) {
+    return function ($receiver) {
+      var $receiver_0 = {};
+      var closure$fontSize_0 = closure$fontSize;
+      var closure$fontWeight_0 = closure$fontWeight;
+      var closure$color_0 = closure$color;
+      var closure$extraStyleProperties_0 = closure$extraStyleProperties;
+      $receiver_0.fontSize = closure$fontSize_0;
+      $receiver_0.fontWeight = closure$fontWeight_0;
+      $receiver_0.color = closure$color_0;
+      closure$extraStyleProperties_0 != null ? closure$extraStyleProperties_0($receiver_0) : null;
+      $receiver.className = css($receiver_0);
+      $receiver.onClick = Text$lambda$lambda(closure$onClick);
+      $receiver.unaryPlus_pdl1vz$(closure$text);
+      return Unit;
+    };
+  }
+  function Text($receiver, text, fontSize, fontWeight, color, onClick, extraStyleProperties) {
+    if (fontSize === void 0) {
+      fontSize = (3).toString() + 'vmin';
+    }
+    if (fontWeight === void 0)
+      fontWeight = {bold: 'bold', normal: 'normal', bolder: 'bolder', lighter: 'lighter'}.normal;
+    if (color === void 0)
+      color = Colors_getInstance().primary;
+    if (onClick === void 0)
+      onClick = null;
+    if (extraStyleProperties === void 0)
+      extraStyleProperties = null;
+    $receiver.invoke_gax9jq$(html.ReactHTML.span, Text$lambda(fontSize, fontWeight, color, extraStyleProperties, onClick, text));
+  }
   $$importsForInline$$['kotlinx-serialization-kotlinx-serialization-core-js-legacy'] = $module$kotlinx_serialization_kotlinx_serialization_core_js_legacy;
   $$importsForInline$$['kotlin-react-core'] = $module$kotlin_react_core;
   $$importsForInline$$['kotlin-emotion'] = $module$kotlin_emotion;
@@ -37053,7 +37399,6 @@ var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_
   Object.defineProperty(MenuOption, 'WorkExperience', {get: MenuOption$WorkExperience_getInstance});
   Object.defineProperty(MenuOption, 'Skills', {get: MenuOption$Skills_getInstance});
   Object.defineProperty(MenuOption, 'Projects', {get: MenuOption$Projects_getInstance});
-  Object.defineProperty(MenuOption, 'Contact', {get: MenuOption$Contact_getInstance});
   Object.defineProperty(MenuOption, 'Companion', {get: MenuOption$Companion_getInstance});
   var package$model = _.model || (_.model = {});
   package$model.MenuOption = MenuOption;
@@ -37063,11 +37408,15 @@ var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_
   package$model.Profile = Profile;
   Object.defineProperty(Project, 'Companion', {get: Project$Companion_getInstance});
   Object.defineProperty(Project, '$serializer', {get: Project$$serializer_getInstance});
-  package$model.Project_init_9zxaf4$ = Project_init;
+  package$model.Project_init_6zcyl3$ = Project_init;
   package$model.Project = Project;
+  Object.defineProperty(Responsibility, 'Companion', {get: Responsibility$Companion_getInstance});
+  Object.defineProperty(Responsibility, '$serializer', {get: Responsibility$$serializer_getInstance});
+  package$model.Responsibility_init_q11ckg$ = Responsibility_init;
+  package$model.Responsibility = Responsibility;
   Object.defineProperty(Skill, 'Companion', {get: Skill$Companion_getInstance});
   Object.defineProperty(Skill, '$serializer', {get: Skill$$serializer_getInstance});
-  package$model.Skill_init_q11ckg$ = Skill_init;
+  package$model.Skill_init_1jgqbb$ = Skill_init;
   package$model.Skill = Skill;
   Object.defineProperty(Social, 'Companion', {get: Social$Companion_getInstance});
   Object.defineProperty(Social, '$serializer', {get: Social$$serializer_getInstance});
@@ -37075,17 +37424,33 @@ var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_
   package$model.Social = Social;
   Object.defineProperty(WorkExperience, 'Companion', {get: WorkExperience$Companion_getInstance});
   Object.defineProperty(WorkExperience, '$serializer', {get: WorkExperience$$serializer_getInstance});
-  package$model.WorkExperience_init_6zcyl3$ = WorkExperience_init;
+  package$model.WorkExperience_init_w8wswi$ = WorkExperience_init;
   package$model.WorkExperience = WorkExperience;
   var package$theme = _.theme || (_.theme = {});
   Object.defineProperty(package$theme, 'Colors', {get: Colors_getInstance});
   package$theme.get_glacialIndifference_3xnrmb$ = get_glacialIndifference;
   var package$utils = _.utils || (_.utils = {});
   package$utils.readFile_hyc7mn$ = readFile;
+  package$utils.padding_n7k60k$ = padding;
+  package$utils.padding_wtrblg$ = padding_0;
+  package$utils.margin_4s7f04$ = margin;
+  package$utils.margin_ldv17w$ = margin_0;
   var package$widgets = _.widgets || (_.widgets = {});
+  package$widgets.Image_wf7v7s$ = Image;
+  package$widgets.LinkImage_7ri1u0$ = LinkImage;
+  package$widgets.Box_43yzp$ = Box;
+  package$widgets.Column_9g4m8b$ = Column;
+  package$widgets.Row_9g4m8b$ = Row;
+  package$widgets.ColumnList_43x3ww$ = ColumnList;
+  package$widgets.RowList_43x3ww$ = RowList;
   package$widgets.VerticalDivider_hyb7wf$ = VerticalDivider;
+  package$widgets.TitleText_60fqw$ = TitleText;
+  package$widgets.LinkText_u8q2lw$ = LinkText;
+  package$widgets.ListText_qxk7ts$ = ListText;
+  package$widgets.Text_qxk7ts$ = Text;
   Profile$$serializer.prototype.typeParametersSerializers = GeneratedSerializer.prototype.typeParametersSerializers;
   Project$$serializer.prototype.typeParametersSerializers = GeneratedSerializer.prototype.typeParametersSerializers;
+  Responsibility$$serializer.prototype.typeParametersSerializers = GeneratedSerializer.prototype.typeParametersSerializers;
   Skill$$serializer.prototype.typeParametersSerializers = GeneratedSerializer.prototype.typeParametersSerializers;
   Social$$serializer.prototype.typeParametersSerializers = GeneratedSerializer.prototype.typeParametersSerializers;
   WorkExperience$$serializer.prototype.typeParametersSerializers = GeneratedSerializer.prototype.typeParametersSerializers;
@@ -41001,6 +41366,13 @@ var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_
       }
       return tmp$;
     }
+    function isUpperCaseImpl($receiver) {
+      var tmp$ = getLetterType($receiver) === 2;
+      if (!tmp$) {
+        tmp$ = isOtherUppercase($receiver | 0);
+      }
+      return tmp$;
+    }
     function getLetterType($receiver) {
       var ch = $receiver | 0;
       var index = binarySearchRange(Letter_getInstance().decodedRangeStart, ch);
@@ -41051,6 +41423,9 @@ var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_
     function isOtherLowercase($receiver) {
       var index = binarySearchRange(OtherLowercase_getInstance().otherLowerStart_8be2vx$, $receiver);
       return index >= 0 && $receiver < (OtherLowercase_getInstance().otherLowerStart_8be2vx$[index] + OtherLowercase_getInstance().otherLowerLength_8be2vx$[index] | 0);
+    }
+    function isOtherUppercase($receiver) {
+      return 8544 <= $receiver && $receiver <= 8559 || (9398 <= $receiver && $receiver <= 9423);
     }
     function titlecaseCharImpl($receiver) {
       var code = $receiver | 0;
@@ -43220,6 +43595,15 @@ var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_
     }
     function isLowSurrogate($receiver) {
       return (new CharRange(kotlin_js_internal_CharCompanionObject.MIN_LOW_SURROGATE, kotlin_js_internal_CharCompanionObject.MAX_LOW_SURROGATE)).contains_mef7kx$($receiver);
+    }
+    function isUpperCase($receiver) {
+      if ((new CharRange(65, 90)).contains_mef7kx$($receiver)) {
+        return true;
+      }
+      if ($receiver < 128) {
+        return false;
+      }
+      return isUpperCaseImpl($receiver);
     }
     function isLowerCase($receiver) {
       if ((new CharRange(97, 122)).contains_mef7kx$($receiver)) {
@@ -49213,7 +49597,9 @@ var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_
     package$text.binarySearchRange_wmnbas$ = binarySearchRange;
     package$text.digitToIntImpl_nupfqh$ = digitToIntImpl;
     package$text.isLowerCaseImpl_nupfqh$ = isLowerCaseImpl;
+    package$text.isUpperCaseImpl_nupfqh$ = isUpperCaseImpl;
     package$text.isOtherLowercase_8e50z4$ = isOtherLowercase;
+    package$text.isOtherUppercase_8e50z4$ = isOtherUppercase;
     package$text.titlecaseCharImpl_nupfqh$ = titlecaseCharImpl;
     package$text.isWhitespaceImpl_nupfqh$ = isWhitespaceImpl;
     package$kotlin.Comparator = Comparator;
@@ -49319,6 +49705,7 @@ var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_
     package$text.titlecaseChar_myv2d0$ = titlecaseChar;
     package$text.isHighSurrogate_myv2d0$ = isHighSurrogate;
     package$text.isLowSurrogate_myv2d0$ = isLowSurrogate;
+    package$text.isUpperCase_myv2d0$ = isUpperCase;
     package$text.isLowerCase_myv2d0$ = isLowerCase;
     package$text.isWhitespace_myv2d0$ = isWhitespace;
     package$text.toInt_pdl1vz$ = toInt;

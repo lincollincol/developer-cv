@@ -5,96 +5,276 @@
   "workExperience": [
     {
       "company": "Deviark",
-      "image": "img/deviark.png",
+      "image": "img/company/deviark.png",
       "role": "Android Developer",
-      "dates": "Mar 2021 — Present (1 y. 7 mon.)"
+      "dates": "Mar 2021 — Present (1 y. 8 mon.)",
+      "responsibilities": [
+        {
+          "name": "responsibility 1"
+        },
+        {
+          "name": "responsibility 2"
+        },
+        {
+          "name": "responsibility 3"
+        }
+      ]
     },
     {
       "company": "Freelance",
-      "image": "img/freelance.png",
+      "image": "img/company/freelance.png",
       "role": "Android Developer",
-      "dates": "Jul 2020 — Oct 2020 (4 mon.)"
+      "dates": "Jul 2020 — Oct 2020 (4 mon.)",
+      "responsibilities": [
+        {
+          "name": "responsibility 1"
+        },
+        {
+          "name": "responsibility 2"
+        },
+        {
+          "name": "responsibility 3"
+        },
+        {
+          "name": "responsibility 4"
+        }
+      ]
+
     },
     {
       "company": "InRating",
-      "image": "img/inrating.webp",
+      "image": "img/company/inrating.png",
       "role": "Android Developer",
-      "dates": "Apr 2020 — Sep 2020 (6 mon.)"
+      "dates": "Apr 2020 — Sep 2020 (6 mon.)",
+      "responsibilities": [
+        {
+          "name": "responsibility 1"
+        },
+        {
+          "name": "responsibility 2"
+        }
+      ]
     },
     {
       "company": "Freelance",
-      "image": "img/freelance.png",
+      "image": "img/company/freelance.png",
       "role": "Android Developer",
-      "dates": "Sep 2019 — Mar 2020 (7 mon.)"
+      "dates": "Sep 2019 — Mar 2020 (7 mon.)",
+      "responsibilities": [
+        {
+          "name": "responsibility 1"
+        },
+        {
+          "name": "responsibility 2"
+        },
+        {
+          "name": "responsibility 3"
+        }
+      ]
     }
   ],
   "skills": [
     {
-      "name": "Developing Android applications using Kotlin and Java languages"
+      "name": "Kotlin",
+      "group": "Common"
     },
     {
-      "name": "Android SDK and Android NDK"
+      "name": "Java",
+      "group": "Common"
     },
     {
-      "name": "Android Architecture Components (Room, ViewModel etc.)"
+      "name": "Android SDK/NDK",
+      "group": "Common"
     },
     {
-      "name": "Clean Architecture, MVP, MVI, MVVM patterns and SOLID principles"
+      "name": "Git",
+      "group": "Common"
     },
     {
-      "name": "OkHttp, Retrofit2, Volley, JSch (sftp), Ktor"
+      "name": "MVVM",
+      "group": "Architecture"
     },
     {
-      "name": "Gson, Kotlin Serialization"
+      "name": "MVI",
+      "group": "Architecture"
     },
     {
-      "name": "Firebase (storage, database, firestore, analytics etc.), GeoFirestore"
+      "name": "MVP",
+      "group": "Architecture"
     },
     {
-      "name": "RxJava, Kotlin Coroutines and Flow"
+      "name": "Clean Architecture",
+      "group": "Architecture"
     },
     {
-      "name": "Koin, Hilt"
+      "name": "SOLID principles",
+      "group": "Architecture"
     },
     {
-      "name": "Cicerone, ExoPlayer, Glide"
+      "name": "Jetpack Compose",
+      "group": "Android Ui"
     },
     {
-      "name": "GoogleMaps, Voximplant, FFmpeg"
+      "name": "View (XML)/Custom view",
+      "group": "Android Ui"
     },
     {
-      "name": "ViewBinding, DataBinding"
+      "name": "ViewBinding/DataBinding",
+      "group": "Android Ui"
     },
     {
-      "name": "MotionLayout, Lottine, Transition API, Groupie, CustomView etc."
+      "name": "Animations (MotionLayout, Transition API, Lottie etc.)",
+      "group": "Android Ui"
     },
     {
-      "name": "Git versions control system"
+      "name": "Groupie",
+      "group": "Android Ui"
+    },
+    {
+      "name": "Glide",
+      "group": "Android Ui"
+    },
+    {
+      "name": "Android Architecture Components (Room, ViewModel, LiveData, Paging3, DataStore etc.)",
+      "group": "Google tools"
+    },
+    {
+      "name": "Firebase (Firestore, Auth, Storage, Analytics etc.)",
+      "group": "Google tools"
+    },
+    {
+      "name": "GoogleMap",
+      "group": "Google tools"
+    },
+    {
+      "name": "Navigation Components",
+      "group": "Navigation"
+    },
+    {
+      "name": "Cicerone",
+      "group": "Navigation"
+    },
+    {
+      "name": "Custom navigation",
+      "group": "Navigation"
+    },
+    {
+      "name": "OkHttp",
+      "group": "Network"
+    },
+    {
+      "name": "Retrofit2",
+      "group": "Network"
+    },
+    {
+      "name": "Ktor (Client/Server)",
+      "group": "Network"
+    },
+    {
+      "name": "Volley",
+      "group": "Network"
+    },
+    {
+      "name": "JSch (SFTP)",
+      "group": "Network"
+    },
+    {
+      "name": "Gson",
+      "group": "Serialization"
+    },
+    {
+      "name": "Kotlin Serialization",
+      "group": "Serialization"
+    },
+    {
+      "name": "Dagger Hilt",
+      "group": "Dependency injection"
+    },
+    {
+      "name": "Koin",
+      "group": "Dependency injection"
+    },
+    {
+      "name": "Kotlin coroutines/flow",
+      "group": "Concurrency"
+    },
+    {
+      "name": "RxJava/RxAndroid",
+      "group": "Concurrency"
+    },
+    {
+      "name": "ExoPlayer",
+      "group": "Media"
+    },
+    {
+      "name": "Media3",
+      "group": "Media"
+    },
+    {
+      "name": "FFMPEG",
+      "group": "Media"
+    },
+    {
+      "name": "Voximplant (audio/video calls)",
+      "group": "Other tools"
+    },
+    {
+      "name": "QuickBlox",
+      "group": "Other tools"
+    },
+    {
+      "name": "GeoFirestore",
+      "group": "Other tools"
+    },
+    {
+      "name": "SceneView (ARCore)",
+      "group": "Other tools"
+    },
+    {
+      "name": "etc.",
+      "group": "Other tools"
     }
   ],
   "projects": [
     {
-      "name": "WaveformSeekbar (open source)",
-      "description": "Android Waveform SeekBar library",
-      "url": "https://github.com/massoudss/waveformSeekBar"
+      "name": "AudioWaveform (open source)",
+      "image": "img/project/audio-waveform.png",
+      "description": "Android library that calculates amplitudes from audio and provides data to draw",
+      "url": "https://github.com/lincollincol/compose-audiowaveform"
     },
     {
       "name": "Amplituda (open source)",
+      "image": "img/project/amplituda.png",
       "description": "Android library that calculates amplitudes from audio and provides data to draw",
       "url": "https://github.com/lincollincol/Amplituda"
     },
     {
-      "name": "AudioTool (open source)",
+      "name": "WaveformSeekbar (open source)",
+      "image": "",
+      "description": "Android Waveform SeekBar library",
+      "url": "https://github.com/massoudss/waveformSeekBar"
+    },
+    {
+      "name": "InPhoto (open source)",
+      "image": "img/project/inphoto.png",
       "description": "Android library that provides audio manipulation functions like increase/decrease speed, pitch, volume, bass, etc. Library also provides cut, noise remover, and other interesting and helpfull functions",
       "url": "https://github.com/lincollincol/AudioTool"
     },
     {
       "name": "Vixinity",
+      "image": "img/project/vixinity.png",
+      "description": "Social platform for residential compounds with news, ads, ability to order food & chat with app users",
+      "url": ""
+    },
+    {
+      "name": "my-vpa",
+      "image": "img/project/vpa.png",
       "description": "Social platform for residential compounds with news, ads, ability to order food & chat with app users",
       "url": ""
     },
     {
       "name": "TopTalk messenger",
+      "image": "img/project/toptalk.png",
       "description": "Messenger that translates messages to your native language",
       "url": ""
     }
@@ -102,22 +282,22 @@
   "socials": [
     {
       "name": "Github",
-      "image": "img/github.png",
+      "image": "img/social/github.png",
       "url": "https://github.com/lincollincol"
     },
     {
       "name": "StackOverflow",
-      "image": "img/stack-overflow.png",
+      "image": "img/social/stack-overflow.png",
       "url": "https://stackoverflow.com/users/9949259/lincollincol"
     },
     {
       "name": "LinkedIn",
-      "image": "img/linkedin.png",
+      "image": "img/social/linkedin.png",
       "url": "https://www.linkedin.com/in/andrew-linc-5976b0169/"
     },
     {
       "name": "Medium",
-      "image": "img/medium.png",
+      "image": "img/social/medium.png",
       "url": "https://medium.com/@lincollincol"
     }
   ]
