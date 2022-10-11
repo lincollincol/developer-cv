@@ -7,5 +7,6 @@ data class Project(
     val name: String,
     val image: String,
     val description: String,
-    val url: String
+    val url: String,
+    val isOpenSource: Boolean,
 )

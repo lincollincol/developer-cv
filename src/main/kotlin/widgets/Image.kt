@@ -15,7 +15,7 @@ fun ChildrenBuilder.Image(
     height: Height,
     radius: BorderRadius = 30.pct,
     fit: ObjectFit = ObjectFit.contain,
-    backgroundColor: BackgroundColor = Colors.primary,
+    backgroundColor: BackgroundColor? = Colors.primary,
     extraStyleProperties: (PropertiesBuilder.() -> Unit)? = null,
     onClick: (() -> Unit)? = null,
 ) {

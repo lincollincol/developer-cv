@@ -9,9 +9,8 @@ import utils.margin
 
 
 fun ChildrenBuilder.Box(
-    width: Width,
-    height: Height,
-//    alignItems: AlignItems = AlignItems.center,
+    width: MinWidth,
+    height: MinHeight,
     backgroundColor: BackgroundColor? = null,
     border: Border? = null,
     borderRadius: BorderRadius? = null,
@@ -20,9 +19,8 @@ fun ChildrenBuilder.Box(
 ) {
     div {
         css {
-            this.width = width
-            this.height = height
-//            this.alignItems = alignItems
+            this.minWidth = width
+            this.minHeight = height
             this.backgroundColor = backgroundColor
             this.border = border
             this.borderRadius = borderRadius

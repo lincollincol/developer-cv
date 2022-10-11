@@ -6,26 +6,14 @@ import model.Project
 import react.ChildrenBuilder
 import react.dom.html.ReactHTML.div
 import theme.Colors
+import theme.Icons
 import utils.margin
 import widgets.*
 
 fun ChildrenBuilder.ProfileProjects(projects: List<Project>) {
-    div {
-        css {
-            display = Display.flex
-            flexDirection = FlexDirection.column
-        }
-        TitleText("Projects")
-        ColumnList(
-            items = projects
-        ) { project ->
-            ProjectItem(project)
-//            LinkText(
-//                text = project.name,
-//                url = project.url
-//            )
-//            Text(project.description)
-        }
+    Column {
+        TitleText(text = "Interesting projects")
+        ColumnList(items = projects) { ProjectItem(it) }
     }
 }
 
@@ -65,7 +53,26 @@ private fun ChildrenBuilder.ProjectItem(project: Project) {
         Column(
             extraStyleProperties = { margin(horizontal = 2.vmin) }
         ) {
-            LinkText(project.name, project.url, fontWeight = FontWeight.bold)
+            Row(
+                extraStyleProperties = {
+                    alignItems = AlignItems.center
+                }
+            ) {
+                LinkText(
+                    project.name,
+                    project.url,
+                    fontWeight = FontWeight.bold,
+                )
+                if(project.isOpenSource) {
+                    Image(
+                        src = Icons.OpenSource,
+                        width = 2.5.vmin,
+                        height = 2.5.vmin,
+                        backgroundColor = null,
+                        extraStyleProperties = { margin(horizontal = 1.vmin) }
+                    )
+                }
+            }
             Text(project.description, fontSize = 2.5.vmin)
         }
     }

@@ -237,46 +237,53 @@
   ],
   "projects": [
     {
-      "name": "AudioWaveform (open source)",
+      "name": "AudioWaveform",
       "image": "img/project/audio-waveform.png",
       "description": "Android library that calculates amplitudes from audio and provides data to draw",
-      "url": "https://github.com/lincollincol/compose-audiowaveform"
+      "url": "https://github.com/lincollincol/compose-audiowaveform",
+      "isOpenSource": true
     },
     {
-      "name": "Amplituda (open source)",
+      "name": "Amplituda",
       "image": "img/project/amplituda.png",
       "description": "Android library that calculates amplitudes from audio and provides data to draw",
-      "url": "https://github.com/lincollincol/Amplituda"
+      "url": "https://github.com/lincollincol/Amplituda",
+      "isOpenSource": true
     },
     {
-      "name": "WaveformSeekbar (open source)",
+      "name": "WaveformSeekbar",
       "image": "",
       "description": "Android Waveform SeekBar library",
-      "url": "https://github.com/massoudss/waveformSeekBar"
+      "url": "https://github.com/massoudss/waveformSeekBar",
+      "isOpenSource": true
     },
     {
-      "name": "InPhoto (open source)",
+      "name": "InPhoto",
       "image": "img/project/inphoto.png",
       "description": "Android library that provides audio manipulation functions like increase/decrease speed, pitch, volume, bass, etc. Library also provides cut, noise remover, and other interesting and helpfull functions",
-      "url": "https://github.com/lincollincol/AudioTool"
+      "url": "https://github.com/lincollincol/AudioTool",
+      "isOpenSource": true
     },
     {
       "name": "Vixinity",
       "image": "img/project/vixinity.png",
       "description": "Social platform for residential compounds with news, ads, ability to order food & chat with app users",
-      "url": ""
+      "url": "",
+      "isOpenSource": false
     },
     {
       "name": "my-vpa",
       "image": "img/project/vpa.png",
       "description": "Social platform for residential compounds with news, ads, ability to order food & chat with app users",
-      "url": ""
+      "url": "",
+      "isOpenSource": false
     },
     {
       "name": "TopTalk messenger",
       "image": "img/project/toptalk.png",
       "description": "Messenger that translates messages to your native language",
-      "url": ""
+      "url": "",
+      "isOpenSource": false
     }
   ],
   "socials": [
