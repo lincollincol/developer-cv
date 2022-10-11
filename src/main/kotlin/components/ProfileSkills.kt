@@ -5,16 +5,13 @@ import emotion.react.css
 import model.Skill
 import react.ChildrenBuilder
 import react.dom.html.ReactHTML.div
+import widgets.Column
 import widgets.ColumnList
 import widgets.ListText
 import widgets.TitleText
 
 fun ChildrenBuilder.ProfileSkills(skills: List<Skill>) {
-    div {
-        css {
-            display = Display.flex
-            flexDirection = FlexDirection.column
-        }
+    Column {
         TitleText("Skills")
         skills.groupBy { it.group }
             .forEach { group ->

@@ -21,6 +21,8 @@ fun ChildrenBuilder.Box(
         css {
             this.minWidth = width
             this.minHeight = height
+            this.maxWidth = width.unsafeCast<MaxWidth>()
+            this.maxHeight = height.unsafeCast<MaxHeight>()
             this.backgroundColor = backgroundColor
             this.border = border
             this.borderRadius = borderRadius

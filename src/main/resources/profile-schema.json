@@ -22,7 +22,7 @@
     },
     {
       "company": "Freelance",
-      "image": "img/company/freelance.png",
+      "image": "",
       "role": "Android Developer",
       "dates": "Jul 2020 — Oct 2020 (4 mon.)",
       "responsibilities": [
@@ -57,7 +57,7 @@
     },
     {
       "company": "Freelance",
-      "image": "img/company/freelance.png",
+      "image": "",
       "role": "Android Developer",
       "dates": "Sep 2019 — Mar 2020 (7 mon.)",
       "responsibilities": [
@@ -279,7 +279,7 @@
       "isOpenSource": false
     },
     {
-      "name": "TopTalk messenger",
+      "name": "TopTalk",
       "image": "img/project/toptalk.png",
       "description": "Messenger that translates messages to your native language",
       "url": "",

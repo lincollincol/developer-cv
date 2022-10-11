@@ -79,7 +79,6 @@ val Menu = FC<MenuProps> { props ->
                 )
             }
         }
-
         footer {
             css {
                 margin(top = Auto.auto, bottom = 2.vmin)

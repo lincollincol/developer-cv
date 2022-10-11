@@ -17,7 +17,7 @@ fun ChildrenBuilder.ProfileProjects(projects: List<Project>) {
     }
 }
 
-private fun ChildrenBuilder.ProjectItem(project: Project) {
+fun ChildrenBuilder.ProjectItem(project: Project) {
     Row(
         extraStyleProperties = {
             margin(vertical = 2.vmin)
@@ -38,6 +38,7 @@ private fun ChildrenBuilder.ProjectItem(project: Project) {
             ) {
                 Text(
                     text = project.name.filter { it.isUpperCase() },
+                    fontSize = 6.vmin,
                     fontWeight = FontWeight.bold,
                     color = Colors.secondary
                 )

@@ -1,8 +1,7 @@
 import components.Content
+import components.CvProfile
 import components.Menu
-import csstype.Display
-import csstype.FontFamily
-import csstype.pct
+import csstype.*
 import emotion.react.css
 import kotlinx.serialization.decodeFromString
 import kotlinx.serialization.json.Json
@@ -13,6 +12,7 @@ import react.Props
 import react.dom.html.ReactHTML.div
 import react.useEffectOnce
 import react.useState
+import theme.Colors
 import theme.glacialIndifference
 import utils.readFile
 import widgets.VerticalDivider
@@ -29,6 +29,25 @@ val App = FC<Props> {
     }
 
     profile?.let {
+        div {
+            css {
+                width = 100.pct
+//                height = 100.pct
+                padding = 0.px
+                margin = 0.px
+                display = Display.flex
+                fontFamily = FontFamily.glacialIndifference
+                backgroundColor = Colors.black
+
+                justifyContent = JustifyContent.center
+                alignItems = AlignItems.center
+            }
+            CvProfile {
+                this.profile = it
+            }
+        }
+    }
+    /*profile?.let {
         div {
             css {
                 width = 100.pct
@@ -51,7 +70,7 @@ val App = FC<Props> {
                 this.selectedMenuOption = currentMenuOption
             }
         }
-    }
+    }*/
 
 }
 
